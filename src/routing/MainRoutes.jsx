@@ -1,17 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/homepage/HomePage";
-import AddProductPage from "../pages/addProductPage/AddProductPage";
-import LoginPage from "../pages/LoginPage/LoginPage";
-import RegisterPage from "../pages/RegisterPage/RegisterPage";
+import RecruiterLoginPage from "../pages/LoginPage/RecruiterLoginPage";
+import RecruiterRegisterPage from "../pages/RegisterPage/RecruiterRegisterPage";
+
 
 const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="register" element={<RegisterPage />} />
-      <Route path="login" element={<LoginPage />} />
-      <Route path="/add" element={<AddProductPage />} />
+      <Route path="/recruter-register/" element={<RecruiterRegisterPage />} />
+      <Route path="/recruter-login/" element={<RecruiterLoginPage />} />
     </Routes>
   );
 };
