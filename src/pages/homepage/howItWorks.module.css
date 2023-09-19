@@ -120,6 +120,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-left: 150px;
 }
 
 
@@ -144,5 +145,22 @@
     font-size: 21.03px;
     line-height: 29.44px;
     color: #828282;
-
 }
+
+
+
+
+.howItWorks_block_2_btn_2 {
+    width: 130.65px;
+    height: 45.82px;
+    border-radius: 31.54px;
+    background: #F2994A;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 21.03px;
+    line-height: 29.44px;
+    color: #FFFFFF;
+}
+
+
+

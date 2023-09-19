@@ -77,13 +77,6 @@
 }
 
 
-.chooseCategories_block_2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
 .chooseCategories_block_1_list_main_txt_2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -92,6 +85,55 @@
     color:#828282;
 
 }
+
+
+
+
+.chooseCategories_block_1_list_main_1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 328px;
+    height: 160.96px;
+    border-radius: 31.54px;
+    gap: 8.41px;
+    background: #F2994A;
+    margin: 30px;
+
+}
+
+
+.chooseCategories_block_1_list_main_txt_1_1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 21.03px;
+    line-height: 29.44px;
+    color:#FFFFFF;
+}
+
+.chooseCategories_block_1_list_main_txt_2_1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14.72px;
+    line-height: 22.08px;
+    color:#FFFFFF;
+
+}
+
+
+
+
+
+
+
+.chooseCategories_block_2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
 
 .chooseCategories_block_2_img_woman {
     position: relative;

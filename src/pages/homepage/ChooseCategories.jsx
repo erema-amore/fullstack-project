@@ -34,14 +34,14 @@ Communication</p>
                         </div>
                     </div>
 
-                    <div className={style.chooseCategories_block_1_list_main}>
+                    <div className={style.chooseCategories_block_1_list_main_1}>
                         <div className={style.chooseCategories_block_1_list_main_img}>
                             <img src={ pen } alt="pen" />
                         </div>
-                        <div className={style.chooseCategories_block_1_list_main_txt}>
-                            <p className={style.chooseCategories_block_1_list_main_txt_1}>UI / UX <br />
+                        <div className={style.chooseCategories_block_1_list_main_txt_1}>
+                            <p className={style.chooseCategories_block_1_list_main_txt_1_1}>UI / UX <br />
 Design</p>
-                            <p className={style.chooseCategories_block_1_list_main_txt_2}>120 Jobs Available</p>
+                            <p className={style.chooseCategories_block_1_list_main_txt_2_1}>120 Jobs Available</p>
                         </div>
                     </div>
 

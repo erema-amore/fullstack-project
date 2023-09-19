@@ -7,6 +7,8 @@ import slack from '../../img/HomePage/homePage_slack.svg'
 import microsoft from '../../img/HomePage/homePage_microsoft.svg'
 import google from '../../img/HomePage/homePage_google.svg'
 import airbnb from '../../img/HomePage/homePage_airbnb.svg'
+import search from '../../img/HomePage/jobDreams_iconoir_search.svg'
+import location from '../../img/HomePage/jobDreams_location.svg'
 
 const JobDreams = () => {
   return (
@@ -26,8 +28,8 @@ your Dreams</p>
                         <p className={style.jobDreams_block_1_txt_2_str}>Frontend</p>
                     </div>
                     <div className={style.jobDreams_block_1_txt_3}>
-                        <div className={style.jobDreams_block_1_txt_3_str}>Job title or keyword</div>
-                        <div className={style.jobDreams_block_1_txt_3_str}>Bandung, Indonesia</div>
+                        <div className={style.jobDreams_block_1_txt_3_str}> <img src={ search } alt="search" /> Job title or keyword</div>
+                        <div className={style.jobDreams_block_1_txt_3_str}> <img src={ location } alt="location" /> Bandung, Indonesia</div>
                         <button className={style.jobDreams_block_1_txt_3_btn}>Search</button>
                     </div>
                 </div>

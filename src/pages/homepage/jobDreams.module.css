@@ -25,10 +25,27 @@
 
 }
 
+.jobDreams_block_1_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.jobDreams_block_1_txt_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
 
 
 
 .jobDreams_block_1_txt_1_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 84.12px;
@@ -117,6 +134,7 @@
 .jobDreams_block_1_img_woman {
     position: relative;
     z-index: 1;
+    
 
 }
 
@@ -125,6 +143,8 @@
 .jobDreams_block_1_img_briefcase {
     position: absolute;
     z-index: 2;
+    right: 100px;
+    top: 100px;
    
 
 }
@@ -133,6 +153,8 @@
 .jobDreams_block_1_img_lightning {
     position: absolute;
     z-index: 2;
+    left: 50px;
+    bottom: 50px;
 
 }
 
@@ -143,6 +165,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 40px;
 }
 
 
@@ -153,7 +176,7 @@
     font-size: 25.24px;
     line-height: 35.33px;
     color: #333333;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 
@@ -162,7 +185,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
 
 
 }
