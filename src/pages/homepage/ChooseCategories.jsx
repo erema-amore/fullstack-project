@@ -23,6 +23,7 @@ const ChooseCategories = () => {
                 </div>
 
                 <div className={style.chooseCategories_block_1_list}>
+                    
                     <div className={style.chooseCategories_block_1_list_main}>
                         <div className={style.chooseCategories_block_1_list_main_img}>
                             <img src={ megaphone } alt="megaphone" />
