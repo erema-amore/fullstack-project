@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+.postList_container {
+    background: #FFF5EC;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+
+
+}
+
+
+.postList_block_1 {
+    
+    background:#FFFFFF;
+    border-radius: 5px;
+    /* border: 2px solid #FF6F61; */
+
+}
+
+
+
+
+.postList_main {
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  
+  .postList_block_1_filters {
+    
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .postList_block_1_jobType {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    /* border: 1px solid #FF6F61; */
+    gap: 5px;
+    
+  }
+  
+  .postList_block_1_filters_main,
+  .postList_block_1_filters_clearAll {
+    /* margin: 0; */
+    
+    font-size: 1.2em;
+  }
+
+
+  .postList_block_1_onSite {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+    /* border: 1px solid #FF6F61; */
+  }
+  
+  
+  .postList_block_1_jobType_list img {
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+  
+ 
+  .postList_block_1_onSite_list img {
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+  
+
+  .postList_block_1_salary {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+    /* border: 1px solid #FF6F61; */
+  }
+
+ 
+  .postList_block_1_salary_list img {
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+
+
+  .postList_block_1_others {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+    /* border: 1px solid #FF6F61; */
+  }
+
+
+  .postList_block_2_head {
+    display: flex;
+    border-radius: 5px;
+    /* border: 1px solid #FF6F61; */
+    
+
+  }
+  
+
+  .postList_block_2_cart {
+    background:#FFFFFF;
+    border-radius: 5px;
+    /* border: 1px solid #FF6F61; */
+    
+  }
+
+
+  
+
+ 
+  .postList_block_2_cart_simple_btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+  }
+  
+  .postList_block_2_cart_simple_btn:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .postList_block_2 {
+    margin-top: 2em;
+  }
+  
+
+  .postList_block_2_head_left {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .postList_block_2_head_left_btn {
+    background-color: #fff;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 0.3em 1em;
+    font-size: 1em;
+    margin-left: 1em;
+  }
+  
+  .postList_block_2_head_left_btn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .postList_block_2_head_right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .postList_block_2_head_right_sort,
+  .postList_block_2_head_right_urgently {
+    margin-right: 0.5em;
+    font-size: 1em;
+  }
+  
+  .postList_block_2_head_right_arrow img {
+    width: 1em;
+    height: 1em;
+  }
+
+
+  .postList_block_2_cart_smoll_logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+ 
+  .postList_block_2_cart_smoll_list {
+    margin-top: 0.5em;
+  }
+  
+  .postList_block_2_cart_smoll_list_rating_stars {
+    margin-right: 0.2em;
+  }
+  
+  .postList_block_2_cart_smoll_list_location img {
+    margin-right: 0.2em;
+  }
+  
+  .postList_block_2_cart_smoll_list_location p {
+    display: inline;
+    font-size: 0.9em;
+    margin: 0;
+  }
+  
+  .postList_block_2_cart_smoll_list_time,
+  .postList_block_2_cart_smoll_list_level,
+  .postList_block_2_cart_smoll_list_state {
+    width: 90px;
+    height: 25px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 31.54px;
+    color: #fff;
+    background-color: #F2994A;
+    margin: 0.3em 0.5em 0.3em 0;
+    font-size: 0.8em;
+    border: none;
+  }
+
+  .postList_block_2_cart_smoll_list_time:hover,
+  .postList_block_2_cart_smoll_list_level:hover,
+  .postList_block_2_cart_smoll_list_state:hover {
+    background-color: #FFD3C0;
+  }
+  
+  .postList_block_2_cart_simple_salary {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  
+  .postList_block_2_cart_simple_btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2994A;
+    line-height: 29.44px;
+    border-radius: 31.54px;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+  }
+
+
+
+  
+  .postList_block_2_cart_simple_btn:hover {
+    background-color: #FFD3C0;
+  }
+  
+
+
+
+
