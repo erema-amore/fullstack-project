@@ -145,12 +145,16 @@
 .chooseCategories_block_2_img_frame {
     position: absolute;
     z-index: 2;
+    
+    
 }
 
 
 .chooseCategories_block_2_img_interview {
     position: absolute;
     z-index: 2;
+    left: 50px;
+    
 
 }
 

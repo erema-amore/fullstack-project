@@ -122,7 +122,12 @@
     font-size: 21.03px;
     line-height: 29.44px;
     color: #FFFFFF;
+    border: none;
 
+}
+
+.jobDreams_block_1_txt_3_btn:hover {
+    background-color: #FFD3C0;
 }
 
 
