@@ -9,6 +9,9 @@ const recruiterSlice = createSlice({
         status: ''
     },
     reducers: {
+        clearCurrentAccount: (state) => {
+            state.currentRecruiter = null;
+        },
         clearStatus: (state) => {
             state.status = '';
         }
@@ -16,16 +19,17 @@ const recruiterSlice = createSlice({
     extraReducers: (builder) => {
         builder
         .addCase(registerRecruiter.fulfilled, (_, action) => {
-            action.payload.navigate('/recruter-login/');
+            action.payload.navigate('/account/recruter-login/');
         })
         .addCase(registerRecruiter.rejected, (state) => {
             state.status = 'error';
         })
         .addCase(loginRecruiter.fulfilled, (state, action) => {
-            state.currentAccount = action.payload.recruiterEmail;
+            state.currentRecruiter = action.payload.recruiterEmail;
             addDataToLocalStorage(action.payload.recruiterEmail, action.payload.data);
             refreshToken();
             action.payload.navigate('/');
+            console.log('login');
         })
         .addCase(loginRecruiter.rejected, (state) => {
             state.status = 'error';
@@ -33,5 +37,5 @@ const recruiterSlice = createSlice({
     }
 })
 
-export const { clearStatus } = recruiterSlice.actions
+export const { clearStatus, currentRecruiter } = recruiterSlice.actions
 export default recruiterSlice.reducer

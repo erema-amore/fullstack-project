@@ -14,7 +14,7 @@ export const registerRecruiter = createAsyncThunk(
         formData.append('country', recruiterObj.country);
         formData.append('company_id', recruiterObj.companyId);
         formData.append('company_phone', recruiterObj.companyPhone);
-        let { data } = await axios.post(`${API}/recruter-register/`, formData);
+        let { data } = await axios.post(`${API}/account/recruter-register/`, formData);
         return { data, navigate };
     }
 );
@@ -25,7 +25,7 @@ export const loginRecruiter = createAsyncThunk(
         let formData = new FormData();
         formData.append('email', recruiterObj.email);
         formData.append('password', recruiterObj.password);
-        let { data } = await axios.post(`${API}/recruter-login/`, formData);
-        return { data, navigate, userEmail: recruiterObj.email };
+        let { data } = await axios.post(`${API}/account/recruter-login/`, formData);
+        return { data, navigate, recruiterEmail: recruiterObj.email };
     }
 );
