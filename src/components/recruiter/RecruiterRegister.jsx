@@ -33,6 +33,7 @@ const RecruiterRegister = () => {
         </>
       ) : (
         <div>
+          
           <input type="email" placeholder="Email" onChange={(e) => setRecruiterObj({ ...recruiterObj, email: e.target.value})} />
 
           <input type="password" minLength="6" placeholder="Password" onChange={(e) => setRecruiterObj({ ...recruiterObj, password: e.target.value})} />
