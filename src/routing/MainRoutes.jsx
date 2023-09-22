@@ -8,6 +8,8 @@ import PostDetailsPage from '../pages/postPage/PostDetailsPage'
 import PostsListPage from '../pages/postPage/PostsListPage'
 import PostUpdatePage from "../pages/postPage/PostUpdatePage";
 import PostCreatePage from "../pages/postPage/PostCreatePage";
+import PostListTest from '../components/posts/PostListTest'
+
 
 
 
@@ -23,6 +25,9 @@ const MainRoutes = () => {
       <Route path="/post/:id/" element={<PostDetailsPage />} />
       <Route path="/posts/" element={<PostsListPage/>} />
       <Route path="/post-create/" element={<PostCreatePage/>} />
+      <Route path="/post-list/" element={<PostListTest/>} />
+     
+
 
     </Routes>
   );  

@@ -16,7 +16,7 @@ const PostsList = () => {
       {loading ? (
         <h3>Loading...</h3>
       ) : (
-        <div>
+        <div className='postCard'>
           {posts.map(post => (
             <PostItem key={post.id} post={post} />
           ))}
