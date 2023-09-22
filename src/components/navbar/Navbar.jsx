@@ -1,17 +1,14 @@
-import React, {useEffect} from 'react'
-import { refreshToken, logout, isUserLogin } from '../../helpers/functions'
-import { useNavigate } from 'react-router-dom';
+
+import React from 'react'
+import style from './navbar.module.css'
+import logo from '../../img/Navbar/navBar_logo.jpg'
+
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    refreshToken();
-  }, []);
 
   const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -22,31 +19,26 @@ const Navbar = () => {
     },
   }));
 
+
   return (
-    <div>
-    <button onClick={() => navigate('/')}>Home</button>
-    {isUserLogin() ? (
-      <>
-      <button onClick={() => navigate('/posts/')}>Posts</button>
-        <button onClick={() => navigate('/post-create/')}>Create Post</button>
-        <button onClick={() => navigate('/favorites')}>Favorites vacancies</button>
-        <button onClick={() => {
-          logout();
-          navigate('/');
-        }}>Logout</button>
-        <IconButton aria-label="cart">
+    <div className={style.main_navbar}>
+      <img src={logo} alt=""  className={style.navbar_logo}/>
+      <h3>About Us</h3>
+      <h3>Jobs</h3>
+      <div>
+      <input type="text" className={style.navbar_search_input} />
+      <button className={style.navbar_search_btn}>Search</button>
+      </div>
+      <h3>Register</h3>
+      <h3>Login</h3>
+      <h3>Logout</h3>
+      <h3>Recruiter</h3>
+      <IconButton aria-label="cart">
       <StyledBadge badgeContent={4} color="secondary">
         <ShoppingCartIcon />
       </StyledBadge>
     </IconButton>
-      </>
-    ) : (
-      <>
-        <button onClick={() => navigate('/account/rec-reg/')}>Register</button>
-        <button onClick={() => navigate('/account/rec-log/')}>Login</button>
-      </>
-    )}
-  </div>
+    </div>
   )
 }
 
