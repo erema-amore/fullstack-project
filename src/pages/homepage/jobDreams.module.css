@@ -144,6 +144,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin: 40px;
 }
 
 
@@ -364,6 +365,7 @@
 
     .jobDreams_block_2_list {
         gap: 5px;
+        
     }
 
     .jobDreams_block_2_txt {
