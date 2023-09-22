@@ -17,7 +17,7 @@ export const getOnePost = createAsyncThunk(
     'posts/getOnePost',
     async ({ id }) => {
         const config = getAuthConfig();
-        const { data } = await axios.get(`${API}/posts/${id}`, config ? config : null);
+        const { data } = await axios.get(`${API}/posts/${id}/`, config ? config : null);
         return data;
     }
 );
@@ -32,10 +32,6 @@ export const createPost = createAsyncThunk(
         newPost.append('experience', post.experience);
         newPost.append('salary', post.salary);
         newPost.append('description', post.description);
-        //actuality	boolean
-// title: Actuality
-// author*	integer
-// title: Author
         const { data } = await axios.post(`${API}/posts/`, newPost, config ? config : null);
         dispatch(getPosts());
         return { data, navigate };
@@ -60,10 +56,6 @@ export const updatePost = createAsyncThunk(
         updatedPost.append('experience', post.experience);
         updatedPost.append('salary', post.salary);
         updatedPost.append('description', post.description);
-         //actuality	boolean
-// title: Actuality
-// author*	integer
-// title: Author
         const { data } = await axios.patch(`${API}/posts/${post.id}/`, updatedPost, config);
         dispatch(getPosts());
         return { data, navigate };
@@ -113,9 +105,9 @@ export const getFavorites = createAsyncThunk(
 
 export const toggleFavorite = createAsyncThunk(
     'posts/toggleFavorite',
-    async ({ postId }, { dispatch }) => {
+    async ({ id }, { postId }, { dispatch }) => {
         const config = getAuthConfig();
-        const { data } = await axios.get(`${API}/posts/${postId}/toggle_favorites/`, config);
+        const { data } = await axios.get(`${API}/posts/${id}/favorites/`, config);
         dispatch(getOnePost({ id: postId }));
         dispatch(getFavorites());
         return { data };

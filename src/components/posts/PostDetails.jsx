@@ -14,11 +14,11 @@ const PostDetails = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getOnePost({ id }));
+        dispatch(getOnePost( {id} ));
         return () => dispatch(clearOnePostState());
     }, []);
 
-    // console.log(onePost);
+    console.log(onePost);
 
   return (
     <div>
@@ -34,7 +34,7 @@ const PostDetails = () => {
                         <h3>{ onePost.salary }</h3>
                         <p>{ onePost.description }</p>
                         {isUserLogin() && (
-                            <button onClick={() => dispatch(toggleFavorite({ postId: onePost.id }))}>{onePost.favorite_by_user ? 'Remove from favorites' : 'Add to favorites'}</button>
+                            <button onClick={() => dispatch(toggleFavorite({ postId: onePost.id }))}>{onePost.favorite ? 'Remove from favorites' : 'Add to favorites'}</button>
                         )}
                         <h3>Reviews:</h3>
                         {isUserLogin() && (
@@ -60,7 +60,7 @@ const PostDetails = () => {
                             <>
                                 {onePost.reviews.map(review => (
                                     <div key={review.id}>
-                                        {console.log(review.is_author)}
+                                        {console.log(review.author)}
                                         <span>{ review.text } </span>
                                         <span>{ review.author } </span>
                                         {review.is_author && (
