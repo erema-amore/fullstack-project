@@ -39,7 +39,10 @@ const RecruiterRegister = () => {
         <div>
 
           
-          <input type="email" placeholder="Email" onChange={(e) => setRecruiterObj({ ...recruiterObj, email: e.target.value})} />
+          <input type="email" 
+           className={styles.inputField}
+           placeholder="Email" 
+           onChange={(e) => setRecruiterObj({ ...recruiterObj, email: e.target.value})} />
 
 
           <input
