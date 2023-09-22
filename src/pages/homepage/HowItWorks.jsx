@@ -1,8 +1,6 @@
 import React from 'react'
 import style from './howItWorks.module.css'
 import woman from '../../img/HomePage/howItWorks_beautiful-woman-listening-music-chatting-using-headphones-laptop-while-sitting-with-legs-crossed-floor-white-wall 1.svg'
-import upload from '../../img/HomePage/howItWorks_upload.svg'
-import hired from '../../img/HomePage/howItWorks_hired.svg'
 
 const HowItWorks = () => {
   return (
@@ -27,8 +25,7 @@ interview and job application</p>
             </div>
             <div className={style.howItWorks_block_1_img}>
               <img className={style.howItWorks_block_1_img_woman} src= { woman } alt="woman" />
-              <img className={style.howItWorks_block_1_img_upload} src={ upload } alt="upload" />
-              <img className={style.howItWorks_block_1_img_hired} src={ hired } alt="hired" />
+              
             </div>
         </div>
 
