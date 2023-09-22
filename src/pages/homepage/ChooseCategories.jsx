@@ -111,14 +111,12 @@ Editor</p>
                         </div>
                     </div>
 
-
                 </div>
             </div>
 
             <div className={style.chooseCategories_block_2}>
                 <div className={style.chooseCategories_block_2_img}>
                     <img className={style.chooseCategories_block_2_img_woman} src={ woman} alt="woman" />
-                  
                   
                 </div>
                 <div className={style.chooseCategories_block_2_txt}>
