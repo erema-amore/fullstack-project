@@ -10,12 +10,7 @@ const RecruiterRegister = () => {
   const [recruiterObj, setRecruiterObj] = useState({
     email: '',
     password: '',
-    passwordConfirm: '',
-    companyName: '',
-    employeePosition: '',
-    country: '',
-    companyId: '',
-    companyPhone: ''
+    passwordConfirm: ''
   });
   const { status } = useSelector(state => state.recruiter);
   const dispatch = useDispatch();
@@ -56,46 +51,6 @@ const RecruiterRegister = () => {
             minLength="6"
             placeholder="Подтвердите пароль"
             onChange={(e) => setRecruiterObj({ ...recruiterObj, passwordConfirm: e.target.value})}
-          />
-
-          <input
-            className={styles.inputField}
-            type="text"
-            minLength="6"
-            placeholder="Название компании"
-            onChange={(e) => setRecruiterObj({ ...recruiterObj, companyName: e.target.value})}
-          />
-
-          <input
-            className={styles.inputField}
-            type="text"
-            minLength="6"
-            placeholder="Должность сотрудника/Отдел"
-            onChange={(e) => setRecruiterObj({ ...recruiterObj, employeePosition: e.target.value})}
-          />
-
-          <input
-            className={styles.inputField}
-            type="text"
-            minLength="6"
-            placeholder="Страна головного офиса"
-            onChange={(e) => setRecruiterObj({ ...recruiterObj, country: e.target.value})}
-          />
-
-          <input
-            className={styles.inputField}
-            type="text"
-            minLength="6"
-            placeholder="Идентификатор компании"
-            onChange={(e) => setRecruiterObj({ ...recruiterObj, companyId: e.target.value})}
-          />
-
-          <input
-            className={styles.inputField}
-            type="text"
-            minLength="6"
-            placeholder="Контактный номер компании"
-            onChange={(e) => setRecruiterObj({ ...recruiterObj, companyPhone: e.target.value})}
           />
 
           <button

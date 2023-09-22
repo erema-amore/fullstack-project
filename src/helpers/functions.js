@@ -12,7 +12,7 @@ export const refreshToken = () => {
         const tokens = JSON.parse(localStorage.getItem('tokens'));
         if(!tokens) return clearInterval(updateFunc);
         const Authorization = `Bearer ${tokens.access}`;
-        const res = await axios.post(`${API}/account/recruter-refresh/`, { refresh: tokens.refresh }, { headers: { Authorization } });
+        const res = await axios.post(`${API}/account/rec-ref/`, { refresh: tokens.refresh }, { headers: { Authorization } });
         localStorage.setItem('tokens', JSON.stringify({ refresh: tokens.refresh, access: res.data.access }));
     }, 1000*60*4 );
 };

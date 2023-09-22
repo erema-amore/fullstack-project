@@ -19,7 +19,7 @@ const recruiterSlice = createSlice({
     extraReducers: (builder) => {
         builder
         .addCase(registerRecruiter.fulfilled, (_, action) => {
-            action.payload.navigate('/account/recruter-login/');
+            action.payload.navigate('/account/rec-log/');
         })
         .addCase(registerRecruiter.rejected, (state) => {
             state.status = 'error';
