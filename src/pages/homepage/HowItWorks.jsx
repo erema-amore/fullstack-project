@@ -25,25 +25,30 @@ interview and job application</p>
             </div>
             <div className={style.howItWorks_block_1_img}>
               <img className={style.howItWorks_block_1_img_woman} src= { woman } alt="woman" />
-              
             </div>
         </div>
 
+        <div className={style.howItWorks_block_2_main}>
         <div className={style.howItWorks_block_2}>
           <div className={style.howItWorks_block_2_txt}>
             <p>Never Want to Miss <br />
 Any Job News?</p>
           </div>
+
            <div className={style.howItWorks_block_2_btn_main}>
-          <div className={style.howItWorks_block_2_btn}>
-            <button className={style.howItWorks_block_2_btn_1}>Enter your email address here...
+           <div className={style.howItWorks_block_2_btn}>
+            <div className={style.howItWorks_block_2_btn_1}>Enter your email address here...
             <button className={style.howItWorks_block_2_btn_2}>Subcribe</button>
-            </button>
+            </div>
           </div>
           </div>
+          
+        </div>
+        </div>
+
 
         </div>
-        </div>
+
     </div>
   )
 }

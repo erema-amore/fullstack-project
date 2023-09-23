@@ -329,8 +329,13 @@
 
     }
 
+    .jobDreams_block_1_txt_3_main {
+        display: flex;
+        justify-content: center;
+    }
 
-    .jobDreams_block_1_txt_3 {
+
+    .jobDreams_block_1_txt_3  {
         display: flex;
         align-items: center;
         gap: 30px;
@@ -360,6 +365,17 @@
         font-size: 19px;
         color: #FFFFFF;
         border: none;
+    }
+
+
+    .jobDreams_block_1_img {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .jobDreams_block_1_img_woman {
+        width: 90%;
     }
 
 

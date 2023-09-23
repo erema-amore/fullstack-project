@@ -25,12 +25,20 @@ your Dreams</p>
                         <p className={style.jobDreams_block_1_txt_2_str}>UI/UX Designer</p>
                         <p className={style.jobDreams_block_1_txt_2_str}>Frontend</p>
                     </div>
+
+
+                    <div className={style.jobDreams_block_1_txt_3_main}>
                     <div className={style.jobDreams_block_1_txt_3}>
                         <div className={style.jobDreams_block_1_txt_3_str}> <img src={ search } alt="search" /> Job title or keyword</div>
                         <div className={style.jobDreams_block_1_txt_3_str}> <img src={ location } alt="location" /> Bandung, Indonesia</div>
                         <button className={style.jobDreams_block_1_txt_3_btn}>Search</button>
                     </div>
+                    </div>
+
                 </div>
+
+
+
                 <div className={style.jobDreams_block_1_img}>
                     <img className={style.jobDreams_block_1_img_woman} src={woman} alt="woman" />
                   
