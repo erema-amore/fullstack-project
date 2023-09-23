@@ -9,8 +9,7 @@ import handshake from '../../img/HomePage/chooseCategories_handshake-simple-soli
 import palette from '../../img/HomePage/chooseCategories_bxs_palette.svg'
 import multiple from '../../img/HomePage/chooseCategories_fluent_video-clip-multiple-16-filled.svg'
 import woman from '../../img/HomePage/chooseCategories_attractive-woman-with-beautiful-smile-sitting-lotus-pose-floor-using-silver-notebook-looking-away-isolated-white-wall 1.svg'
-import frame from '../../img/HomePage/chooseCategories_Frame 29.svg'
-import interview from '../../img/HomePage/chooseCategories_interview.svg'
+
 
 const ChooseCategories = () => {
   return (
@@ -23,25 +22,26 @@ const ChooseCategories = () => {
                 </div>
 
                 <div className={style.chooseCategories_block_1_list}>
+                    
                     <div className={style.chooseCategories_block_1_list_main}>
                         <div className={style.chooseCategories_block_1_list_main_img}>
                             <img src={ megaphone } alt="megaphone" />
                         </div>
                         <div className={style.chooseCategories_block_1_list_main_txt}>
-                            <p className={style.chooseCategories_block_1_list_main_txt_1}>Marketing &
+                            <p className={style.chooseCategories_block_1_list_main_txt_1}>Marketing & <br />
 Communication</p>
                             <p className={style.chooseCategories_block_1_list_main_txt_2}>58 Jobs Available</p>
                         </div>
                     </div>
 
-                    <div className={style.chooseCategories_block_1_list_main_1}>
+                    <div className={style.chooseCategories_block_1_list_main}>
                         <div className={style.chooseCategories_block_1_list_main_img}>
                             <img src={ pen } alt="pen" />
                         </div>
-                        <div className={style.chooseCategories_block_1_list_main_txt_1}>
-                            <p className={style.chooseCategories_block_1_list_main_txt_1_1}>UI / UX <br />
+                        <div className={style.chooseCategories_block_1_list_main_txt}>
+                            <p className={style.chooseCategories_block_1_list_main_txt_1}>UI / UX <br />
 Design</p>
-                            <p className={style.chooseCategories_block_1_list_main_txt_2_1}>120 Jobs Available</p>
+                            <p className={style.chooseCategories_block_1_list_main_txt_2}>120 Jobs Available</p>
                         </div>
                     </div>
 
@@ -111,15 +111,13 @@ Editor</p>
                         </div>
                     </div>
 
-
                 </div>
             </div>
 
             <div className={style.chooseCategories_block_2}>
                 <div className={style.chooseCategories_block_2_img}>
                     <img className={style.chooseCategories_block_2_img_woman} src={ woman} alt="woman" />
-                    <img className={style.chooseCategories_block_2_img_frame} src={ frame } alt="frame" />
-                    <img className={style.chooseCategories_block_2_img_interview} src={ interview } alt="interview" />
+                  
                 </div>
                 <div className={style.chooseCategories_block_2_txt}>
                     <p className={style.chooseCategories_block_2_txt_1}>Create Profile</p>

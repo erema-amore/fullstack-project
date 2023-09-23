@@ -9,12 +9,7 @@ export const registerRecruiter = createAsyncThunk(
         formData.append('email', recruiterObj.email);
         formData.append('password', recruiterObj.password);
         formData.append('password_confirm', recruiterObj.passwordConfirm);
-        formData.append('company_name', recruiterObj.companyName);
-        formData.append('employee_position', recruiterObj.employeePosition);
-        formData.append('country', recruiterObj.country);
-        formData.append('company_id', recruiterObj.companyId);
-        formData.append('company_phone', recruiterObj.companyPhone);
-        let { data } = await axios.post(`${API}/recruter-register/`, formData);
+        let { data } = await axios.post(`${API}/account/rec-reg/`, formData);
         return { data, navigate };
     }
 );
@@ -25,7 +20,7 @@ export const loginRecruiter = createAsyncThunk(
         let formData = new FormData();
         formData.append('email', recruiterObj.email);
         formData.append('password', recruiterObj.password);
-        let { data } = await axios.post(`${API}/recruter-login/`, formData);
-        return { data, navigate, userEmail: recruiterObj.email };
+        let { data } = await axios.post(`${API}/account/rec-log/`, formData);
+        return { data, navigate, recruiterEmail: recruiterObj.email };
     }
 );

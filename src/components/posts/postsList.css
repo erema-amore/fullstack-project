@@ -1,0 +1,10 @@
+#posts-list {
+  background: #fff5ec;
+}
+
+.posts__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}

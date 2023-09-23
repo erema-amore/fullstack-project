@@ -1,12 +1,12 @@
-import React from 'react'
-import PostDetails from '../../components/posts/PostDetails'
+import React from "react";
+import PostDetails from "../../components/posts/PostDetails";
 
 const PostDetailsPage = () => {
   return (
     <div>
-        <PostDetails/>
+      <PostDetails />
     </div>
-  )
-}
+  );
+};
 
-export default PostDetailsPage
+export default PostDetailsPage;

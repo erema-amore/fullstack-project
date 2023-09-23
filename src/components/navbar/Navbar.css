@@ -1,6 +1,5 @@
 #navbar {
   background: #fff5ec;
-  height: 14vh;
 }
 .navbar__container {
   padding-top: 2%;
@@ -10,7 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2%;
+  padding-bottom: 2%;
 }
 .navbar__logo img {
   width: 120px;
