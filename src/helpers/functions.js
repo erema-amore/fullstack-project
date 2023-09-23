@@ -23,8 +23,14 @@ export const logout = () => {
     localStorage.removeItem('tokens');   
 };
 
+export const isRecruiterLogin = () => {
+    const recruiter = localStorage.getItem('recruiter');
+    if(!recruiter) return false;
+    return true;
+};
+
 export const isUserLogin = () => {
-    const user = localStorage.getItem('recruiter');
+    const user = localStorage.getItem('user');
     if(!user) return false;
     return true;
 };
