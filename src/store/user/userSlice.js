@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { registerUser, loginUser} from './userAction';
-import { refreshToken, addDataToLocalStorage } from '../../helpers/functions'
+import { refreshUserToken, addUserDataToLocalStorage } from '../../helpers/functions'
 
 const userSlice = createSlice({
     name: 'user',
@@ -26,8 +26,8 @@ const userSlice = createSlice({
         })
         .addCase(loginUser.fulfilled, (state, action) => {
             state.currentUser = action.payload.userEmail;
-            addDataToLocalStorage(action.payload.userEmail, action.payload.data);
-            refreshToken();
+            addUserDataToLocalStorage(action.payload.userEmail, action.payload.data);
+            refreshUserToken(); refreshUserToken()
             action.payload.navigate('/');
             console.log('user login');
         })

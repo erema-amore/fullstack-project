@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getOnePost, createReview, deleteReview, toggleFavorite } from '../../store/post/postAction';
 import { clearOnePostState } from '../../store/post/postSlice';
 import { isRecruiterLogin } from '../../helpers/functions';
+import style from './postDetails.module.css'
+
 
 const PostDetails = () => {
   const { loading, onePost } = useSelector(state => state.posts);

@@ -1,8 +1,6 @@
 import React from 'react'
 import style from './jobDreams.module.css'
 import woman from '../../img/HomePage/homePage_woman.svg'
-import briefcase from '../../img/HomePage/homePage_briefcase.svg'
-import lightning from '../../img/HomePage/homePage_lightning.svg'
 import slack from '../../img/HomePage/homePage_slack.svg'
 import microsoft from '../../img/HomePage/homePage_microsoft.svg'
 import google from '../../img/HomePage/homePage_google.svg'
@@ -27,16 +25,23 @@ your Dreams</p>
                         <p className={style.jobDreams_block_1_txt_2_str}>UI/UX Designer</p>
                         <p className={style.jobDreams_block_1_txt_2_str}>Frontend</p>
                     </div>
+
+
+                    <div className={style.jobDreams_block_1_txt_3_main}>
                     <div className={style.jobDreams_block_1_txt_3}>
                         <div className={style.jobDreams_block_1_txt_3_str}> <img src={ search } alt="search" /> Job title or keyword</div>
                         <div className={style.jobDreams_block_1_txt_3_str}> <img src={ location } alt="location" /> Bandung, Indonesia</div>
                         <button className={style.jobDreams_block_1_txt_3_btn}>Search</button>
                     </div>
+                    </div>
+
                 </div>
+
+
+
                 <div className={style.jobDreams_block_1_img}>
                     <img className={style.jobDreams_block_1_img_woman} src={woman} alt="woman" />
-                    <img className={style.jobDreams_block_1_img_briefcase} src={briefcase} alt="briefcase" />
-                    <img className={style.jobDreams_block_1_img_lightning} src={lightning} alt="lightning" />
+                  
                 </div>
             </div>
 
@@ -45,18 +50,24 @@ your Dreams</p>
                     <p>Join Most Well Known Companies Around The World</p>
                 </div>
                 <div className={style.jobDreams_block_2_list}>
+
+                    
+
                     <div className={style.jobDreams_block_2_list_main}>
-                        <img src={ slack } alt="slack" />
+                        <img className={style.jobDreams_block_2_list_main_img} src={ slack } alt="slack" />
                     </div>
                     <div className={style.jobDreams_block_2_list_main}>
-                        <img src={ microsoft } alt="microsoft" />
+                        <img className={style.jobDreams_block_2_list_main_img} src={ microsoft } alt="microsoft" />
                     </div>
                     <div className={style.jobDreams_block_2_list_main}>
-                        <img src={ google } alt="google" />
+                        <img className={style.jobDreams_block_2_list_main_img} src={ google } alt="google" />
                     </div>
                     <div className={style.jobDreams_block_2_list_main}>
-                        <img src={ airbnb } alt="airbnb" />
+                        <img className={style.jobDreams_block_2_list_main_img} src={ airbnb } alt="airbnb" />
                     </div>
+
+                    
+
                 </div>
             </div>
 
