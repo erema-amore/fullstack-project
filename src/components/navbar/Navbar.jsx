@@ -1,14 +1,18 @@
 
-import React from 'react'
-import style from './navbar.module.css'
-import logo from '../../img/Navbar/navBar_logo.jpg'
-
+import React, {useEffect} from 'react'
+import { refreshToken, refreshUserToken, logout, isRecruiterLogin, isUserLogin } from '../../helpers/functions'
+import { useNavigate } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Navbar = () => {
+  const navigate = useNavigate()
+  useEffect(() => {
+    refreshToken();
+    refreshUserToken()
+  }, []);
 
   const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -21,24 +25,40 @@ const Navbar = () => {
 
 
   return (
-    <div className={style.main_navbar}>
-      <img src={logo} alt=""  className={style.navbar_logo}/>
-      <h3>About Us</h3>
-      <h3>Jobs</h3>
-      <div>
-      <input type="text" className={style.navbar_search_input} />
-      <button className={style.navbar_search_btn}>Search</button>
-      </div>
-      <h3>Register</h3>
-      <h3>Login</h3>
-      <h3>Logout</h3>
-      <h3>Recruiter</h3>
-      <IconButton aria-label="cart">
+    <div>
+    <button onClick={() => navigate('/')}>Home</button>
+    <button onClick={() => navigate('/posts/')}>Jobs</button>
+    {isRecruiterLogin() ? (
+      <>
+        {isUserLogin() ? (
+          <>
+          <button >Favorites vacancies</button>
+          <button >User Logout</button>
+          </>
+        ) : (
+          <>
+          <button onClick={() => navigate('/post-create/')}>Create Post</button>
+        <button onClick={() => navigate('/favorites')}>Favorites vacancies</button>
+        <button >Recruiter Profile</button>
+        <button onClick={() => { logout(); navigate('/'); }}> Recruiter Logout</button>
+        <IconButton aria-label="cart">
       <StyledBadge badgeContent={4} color="secondary">
         <ShoppingCartIcon />
       </StyledBadge>
     </IconButton>
-    </div>
+          </>
+        ) }
+        
+      </>
+    ) : (
+      <>
+        <button onClick={() => navigate('/account/rec-reg/')}>Register</button>
+        <button onClick={() => navigate('/account/rec-log/')}>Login</button>
+        <button onClick={() => navigate('/account/user-reg/')}> UserRegister</button>
+        <button onClick={() => navigate('/account/user-log/')}>UserLogin</button>
+      </>
+    )}
+  </div>
   )
 }
 

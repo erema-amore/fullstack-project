@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getOnePost, createReview, deleteReview, toggleFavorite } from '../../store/post/postAction';
 import { clearOnePostState } from '../../store/post/postSlice';
-import { isUserLogin } from '../../helpers/functions';
+import { isRecruiterLogin } from '../../helpers/functions';
 import style from './postDetails.module.css'
+
 
 const PostDetails = () => {
   const { loading, onePost } = useSelector(state => state.posts);
@@ -33,11 +34,11 @@ const PostDetails = () => {
                         <h3>{ onePost.experience }</h3>
                         <h3>{ onePost.salary }</h3>
                         <p>{ onePost.description }</p>
-                        {isUserLogin() && (
+                        {isRecruiterLogin() && (
                             <button onClick={() => dispatch(toggleFavorite({ postId: onePost.id }))}>{onePost.favorite ? 'Remove from favorites' : 'Add to favorites'}</button>
                         )}
                         <h3>Reviews:</h3>
-                        {isUserLogin() && (
+                        {isRecruiterLogin() && (
                             <button onClick={() => setShowReviewForm(!showReviewForm)}>Add review</button>
                         )}
 
