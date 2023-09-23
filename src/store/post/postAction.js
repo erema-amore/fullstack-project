@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+
 import { API } from "../../helpers/consts";
 import { getAuthConfig } from "../../helpers/functions";
 
@@ -21,10 +22,9 @@ export const getOnePost = createAsyncThunk(
   async ({ id }) => {
     const config = getAuthConfig();
     const { data } = await axios.get(
-      `${API}/posts/${id}`,
+      `${API}/posts/${id}/`,
       config ? config : null
     );
-
     return data;
   }
 );
@@ -39,7 +39,6 @@ export const createPost = createAsyncThunk(
     newPost.append("experience", post.experience);
     newPost.append("salary", post.salary);
     newPost.append("description", post.description);
-
     const { data } = await axios.post(
       `${API}/posts/`,
       newPost,
@@ -68,7 +67,6 @@ export const updatePost = createAsyncThunk(
     updatedPost.append("experience", post.experience);
     updatedPost.append("salary", post.salary);
     updatedPost.append("description", post.description);
-
     const { data } = await axios.patch(
       `${API}/posts/${post.id}/`,
       updatedPost,
@@ -119,36 +117,9 @@ export const getFavorites = createAsyncThunk("posts/getFavorites", async () => {
 
 export const toggleFavorite = createAsyncThunk(
   "posts/toggleFavorite",
-
   async ({ id }, { postId }, { dispatch }) => {
     const config = getAuthConfig();
     const { data } = await axios.get(`${API}/posts/${id}/favorites/`, config);
-    dispatch(getOnePost({ id: postId }));
-    dispatch(getFavorites());
-    return { data };
-  }
-);
-
-export const addToFavorites = createAsyncThunk(
-  "posts/addToFavorite",
-
-  async ({ id }, { postId }, { dispatch }) => {
-    const config = getAuthConfig();
-    const { data } = await axios.get(`${API}/posts/${id}/favorites/`, config);
-    dispatch(getOnePost({ id: postId }));
-    dispatch(getFavorites());
-    return { data };
-  }
-);
-
-export const removeFromFavorites = createAsyncThunk(
-  "posts/removeFromFavorite",
-  async ({ id }, { postId }, { dispatch }) => {
-    const config = getAuthConfig();
-    const { data } = await axios.delete(
-      `${API}/posts/${id}/favorites/`,
-      config
-    );
     dispatch(getOnePost({ id: postId }));
     dispatch(getFavorites());
     return { data };

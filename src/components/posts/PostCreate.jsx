@@ -12,6 +12,7 @@ const PostCreate = () => {
     description: "",
   });
   const { categories } = useSelector((state) => state.posts);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
