@@ -281,14 +281,20 @@
 
 @media(max-width: 768px) {
 
+
+    .chooseCategories_main {
+        margin: 0;
+        padding: 0;
+    }
+
     .chooseCategories_block_1_txt_1 {
         font-family: 'Poppins', sans-serif;
         font-weight: 350;
         font-size: 17px;
         line-height: 25px;
         color: #F2994A;
-        margin: 10px 0;
-        padding: 20px;
+        margin: 0px 0;
+        padding: 0px;
     }
 
 
@@ -299,6 +305,7 @@
         line-height: 40px;
         color:  #333333;
         margin: 10px 0;
+        
     
     }
 
@@ -313,7 +320,7 @@
         border-radius: 31.54px;
         gap: 8.41px;
         background:#FFFFFF;
-        margin: 30px;
+        margin: 20px;
         
     }
 
@@ -342,6 +349,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 0;
+    padding: 0;
+
     
 }
 
@@ -408,21 +418,38 @@
 
 @media(max-width: 320px) {
 
+    .chooseCategories_block_1_txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        
+    
+    }
+
+
+    
     .chooseCategories_block_1_txt_1 {
         font-family: 'Poppins', sans-serif;
         font-weight: 350;
         font-size: 17px;
         line-height: 25px;
         color: #F2994A;
-        margin: 10px 0;
-        padding: 20px;
+        margin: 0px 0;
+        padding: 0px;
+        margin: 2px 0;
     }
+
+
+    
+   
 
 
     .chooseCategories_block_1_txt_2 {
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
-        font-size: 35px;
+        font-size: 25px;
         line-height: 40px;
         color:  #333333;
         margin: 10px 0;
@@ -444,13 +471,18 @@
         
     }
 
+
+    .chooseCategories_block_1_list {
+        margin: 0;
+    }
+
     .chooseCategories_block_1_list_main_txt_1 {
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
         color:#333333;
-        margin: 10px;
+       
     }
 
 
@@ -469,7 +501,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 40px;
+    
 }
 
 
@@ -496,7 +528,7 @@
 .chooseCategories_block_2_txt_2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 25px;
     line-height: 40px;
     color: #333333;
     margin: 20px 0;
@@ -507,10 +539,11 @@
 .chooseCategories_block_2_txt_3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
     color: #000000;
     margin: 20px 0;
+    padding: 10px;
 }
 
 
@@ -524,7 +557,7 @@
     font-size: 14px;
     line-height: 28px;
     color: #FFFFFF;
-    margin: 40px 0;
+    margin: 0px 0;
     border: none;
 }
 

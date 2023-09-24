@@ -18,7 +18,7 @@ const ChooseCategories = () => {
             <div className={style.chooseCategories_block_1}>
                 <div className={style.chooseCategories_block_1_txt}>
                     <p className={style.chooseCategories_block_1_txt_1}>Choose Categories</p>
-                    <p className={style.chooseCategories_block_1_txt_2}>Choose Categories</p>
+                    <p className={style.chooseCategories_block_1_txt_2}>Choose Categories</p> 
                 </div>
 
                 <div className={style.chooseCategories_block_1_list}>

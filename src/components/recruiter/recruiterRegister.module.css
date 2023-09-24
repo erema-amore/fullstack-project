@@ -21,7 +21,7 @@
   }
   
   .errorMessage {
-    margin: 10px 0;
+    margin: 20px 0;
     color:#828282;
   }
   
@@ -51,3 +51,182 @@
     background-color:#efae75;
   }
   
+
+
+
+
+
+
+
+
+  @media(max-width: 1440px) {
+
+    
+.container {
+  max-width: 390px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  
+}
+
+.heading {
+  font-size: 23px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.errorMessage {
+  margin: 20px 0;
+  color:#828282;
+  font-size: 18px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 31.54px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F2994A;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+  }
+
+
+
+
+
+
+
+  
+  @media(max-width: 768px) {
+
+    
+    .container {
+      max-width: 380px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      
+    }
+    
+    .heading {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .errorMessage {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      color:#828282;
+      font-size: 15px;
+    }
+
+
+
+    .inputField {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 31.54px;
+      border: none;
+      border-radius: 4px;
+      background-color: #F2994A;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    
+    
+      }
+
+
+
+
+
+
+
+
+
+
+
+       
+  @media(max-width: 320px) {
+
+    
+    .container {
+      max-width: 310px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      
+    }
+    
+    .heading {
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .errorMessage {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      color:#828282;
+      font-size: 9px;
+    }
+    
+    .inputField {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    
+    .button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 31.54px;
+      border: none;
+      border-radius: 4px;
+      background-color: #F2994A;
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    
+    
+      }
