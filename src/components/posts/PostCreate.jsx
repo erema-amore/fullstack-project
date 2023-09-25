@@ -16,9 +16,9 @@ const PostCreate = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(getCategories());
-  }, []);
+    useEffect(() => {
+        dispatch(getCategories());
+    }, []);
 
   return (
     <div>
