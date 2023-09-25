@@ -21,23 +21,8 @@ const Navbar = () => {
 
 
   return (
-    <div className={style.main_navbar}>
-      <img src={logo} alt=""  className={style.navbar_logo}/>
-      <h3>About Us</h3>
-      <h3>Jobs</h3>
-      <div>
-      <input type="text" className={style.navbar_search_input} />
-      <button className={style.navbar_search_btn}>Search</button>
-      </div>
-      <h3>Register</h3>
-      <h3>Login</h3>
-      <h3>Logout</h3>
-      <h3>Recruiter</h3>
-      <IconButton aria-label="cart">
-      <StyledBadge badgeContent={4} color="secondary">
-        <ShoppingCartIcon />
-      </StyledBadge>
-    </IconButton>
+    <div >
+      
     </div>
   )
 }
