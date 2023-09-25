@@ -1,4 +1,48 @@
+.main {
+    background: #FFF5EC;
+    height: 100vh;
+}
 
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #F2994A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #efae75;
+  }
+  
+
+
+
+
+
+
+
+
+/* 
 
 .main {
     background: #FFF5EC;
@@ -187,4 +231,4 @@
         transition: background-color 0.3s;
     }
     
-    }
+    } */

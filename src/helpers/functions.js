@@ -51,3 +51,10 @@ export const getAuthConfig = () => {
   };
   return config;
 }
+
+
+export const isUserLogin = () => {
+  const user = localStorage.getItem('recruiter');
+  if(!user) return false;
+  return true;
+};
