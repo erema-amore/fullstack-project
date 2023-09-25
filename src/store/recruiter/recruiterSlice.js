@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerRecruiter, loginRecruiter, getOneRecruiter} from './recruiterAction';
+import { registerRecruiter, loginRecruiter, getOneRecruiter, updateRecruiterProfile} from './recruiterAction';
 import { refreshToken, addDataToLocalStorage } from '../../helpers/functions'
 
 const recruiterSlice = createSlice({
@@ -8,7 +8,8 @@ const recruiterSlice = createSlice({
         currentRecruiter: null,
         status: '',
         loading: false,
-        profile: []
+        profile: [],
+        editProfile: null
     },
     reducers: {
         clearCurrentAccount: (state) => {
@@ -41,11 +42,14 @@ const recruiterSlice = createSlice({
         })
         .addCase(getOneRecruiter.fulfilled, (state, action) => {
             state.loading = false;
-            state.favorites = action.payload
-            console.log(state);
+            state.profile = action.payload.data;
+            console.log(state.profile);
         })
         .addCase(getOneRecruiter.rejected, (state) => {
             state.loading = true;
+        })
+        .addCase(updateRecruiterProfile.fulfilled, (_, action) => {
+            action.payload.navigate('/profile/req/');
         })
     }
 })
