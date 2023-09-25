@@ -8,7 +8,7 @@ const recruiterSlice = createSlice({
         currentRecruiter: null,
         status: '',
         loading: false,
-        profile: null
+        profile: []
     },
     reducers: {
         clearCurrentAccount: (state) => {
@@ -40,12 +40,12 @@ const recruiterSlice = createSlice({
             state.loading = true;
         })
         .addCase(getOneRecruiter.fulfilled, (state, action) => {
-            console.log(state);
             state.loading = false;
-            state.onePost = action.payload
+            state.favorites = action.payload
+            console.log(state);
         })
         .addCase(getOneRecruiter.rejected, (state) => {
-            state.loading = false;
+            state.loading = true;
         })
     }
 })

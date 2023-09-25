@@ -27,14 +27,13 @@ export const loginRecruiter = createAsyncThunk(
 );
 
 export const getOneRecruiter = createAsyncThunk(
-  "recruiter/getOneRecruiter",
-  async () => {
-    const config = getAuthConfig();
-    const profile = await axios.get(
-      `${API}/profile/req/`,
-      config ? config : null
-    );
-    console.log(profile);
-    return profile;
-  }
+
+    'recruiter/getOneRecruiter',
+    async () => {
+        const config = getAuthConfig();
+        const {data} = await axios.get(`${API}/profile/req/`, config);
+        console.log(data);
+        return {data};
+    }
+
 );
