@@ -482,14 +482,10 @@
 }
 
 
-.chooseCategories_block_2_img_woman {
-  position: relative;
-  z-index: 1;
-}
 
-.chooseCategories_block_2_img_frame {
-  position: absolute;
-  z-index: 2;
+
+.chooseCategories_block_2_img_woman {
+    width: 90%;
 }
 
 .chooseCategories_block_2_txt_1 {

@@ -371,7 +371,7 @@
 }
 
 .howItWorks_block_2 {
-    width: 800px;
+    width: 730px;
     height: 200px;
     border-radius: 84.12px;
     background: #F2994A;
@@ -582,7 +582,6 @@
 
 
 .howItWorks_block_2_btn_2 {
-   
     width: 90px;
     height: 30px;
     border-radius: 31.54px;
@@ -593,6 +592,7 @@
     line-height: 25px;
     color: #FFFFFF;
     border: none;
+    
 }
 
 
