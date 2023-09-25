@@ -35,3 +35,19 @@ export const getOneRecruiter = createAsyncThunk(
         return {data};
     }
 );
+
+export const updateRecruiterProfile = createAsyncThunk(
+    'recruiter/updateRecruiterProfile',
+    async ({ editProfile, navigate }, { dispatch }) => {
+        const config = getAuthConfig();
+        const updateRecruiterProfile= new FormData();
+        updateRecruiterProfile.append('company_name', editProfile.company_name);
+        updateRecruiterProfile.append('location', editProfile.location);
+        updateRecruiterProfile.append('amount_of_emplyees', editProfile.amount_of_emplyees);
+        updateRecruiterProfile.append('company_phone', editProfile.company_phone);
+        updateRecruiterProfile.append('about_company', editProfile.about_company);
+        const { data } = await axios.patch(`${API}/profile/req/`, updateRecruiterProfile, config);
+        dispatch(getOneRecruiter());
+        return { data, navigate };
+    }
+);

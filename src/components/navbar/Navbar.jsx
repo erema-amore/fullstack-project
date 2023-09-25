@@ -39,7 +39,7 @@ const Navbar = () => {
           <>
           <button onClick={() => navigate('/post-create/')}>Create Post</button>
         <button onClick={() => navigate('/favorites')}>Favorites vacancies</button>
-        <button >Recruiter Profile</button>
+        <button onClick={() => navigate('/profile/req/')} >Recruiter Profile</button>
         <button onClick={() => { logout(); navigate('/'); }}> Recruiter Logout</button>
         <IconButton aria-label="cart">
       <StyledBadge badgeContent={4} color="secondary">

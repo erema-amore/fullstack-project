@@ -11,6 +11,7 @@ import PostsListPage from '../pages/postPage/PostsListPage'
 import PostUpdatePage from "../pages/postPage/PostUpdatePage";
 import PostCreatePage from "../pages/postPage/PostCreatePage";
 import RecruiterProfilePage from "../pages/profilePage/RecruiterProfilePage";
+import RecruiterProfileUpdatePage from '../pages/profilePage/RecruiterProfileUpdatePage'
 import UserProfilePage from "../pages/profilePage/UserProfilePage";
 import PostListTest from '../components/posts/PostListTest'
 
@@ -29,6 +30,7 @@ const MainRoutes = () => {
       <Route path="/account/rec-reg/" element={<RecruiterRegisterPage />} />
       <Route path="/account/rec-log/" element={<RecruiterLoginPage />} />
       <Route path="/profile/req/" element={<RecruiterProfilePage />} />
+      <Route path="/profile-update/req/" element={<RecruiterProfileUpdatePage />} />
       <Route path="/post-update/:id/" element={<PostUpdatePage />} />
       <Route path="/post/:id/" element={<PostDetailsPage />} />
       <Route path="/posts/" element={<PostsListPage/>} />
