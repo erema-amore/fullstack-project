@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerRecruiter, loginRecruiter} from './recruiterAction';
+import { registerRecruiter, loginRecruiter, getOneRecruiter} from './recruiterAction';
 import { refreshToken, addDataToLocalStorage } from '../../helpers/functions'
 
 const recruiterSlice = createSlice({
     name: 'recruiter',
     initialState: {
         currentRecruiter: null,
-        status: ''
+        status: '',
+        loading: false,
+        profile: []
     },
     reducers: {
         clearCurrentAccount: (state) => {
@@ -33,6 +35,17 @@ const recruiterSlice = createSlice({
         })
         .addCase(loginRecruiter.rejected, (state) => {
             state.status = 'error';
+        })
+        .addCase(getOneRecruiter.pending, (state) => {
+            state.loading = true;
+        })
+        .addCase(getOneRecruiter.fulfilled, (state, action) => {
+            state.loading = false;
+            state.favorites = action.payload
+            console.log(state);
+        })
+        .addCase(getOneRecruiter.rejected, (state) => {
+            state.loading = true;
         })
     }
 })

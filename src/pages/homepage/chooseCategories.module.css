@@ -1,106 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-
-
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 
 .chooseCategories_container {
-    background: #FFF5EC;
-    
+  background: #fff5ec;
 }
-
 
 .chooseCategories_block_1_txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
 }
 
-
 .chooseCategories_block_1_txt_1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 450;
-    font-size: 23px;
-    line-height: 33px;
-    color: #F2994A;
-    margin: 10px 0;
-    padding: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+  font-size: 23px;
+  line-height: 33px;
+  color: #f2994a;
+  margin: 10px 0;
+  padding: 20px;
 }
 
 .chooseCategories_block_1_txt_2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 550;
-    font-size: 43px;
-    line-height: 50px;
-    color:  #333333;
-    margin: 10px 0;
-
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  font-size: 43px;
+  line-height: 50px;
+  color: #333333;
+  margin: 10px 0;
 }
-
 
 .chooseCategories_block_1_list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
 }
-
 
 .chooseCategories_block_1_list_main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 328px;
-    height: 160.96px;
-    border-radius: 31.54px;
-    gap: 8.41px;
-    background:#FFFFFF;
-    margin: 30px;
-    
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 328px;
+  height: 160.96px;
+  border-radius: 31.54px;
+  gap: 8.41px;
+  background: #ffffff;
+  margin: 30px;
 }
-
 
 .chooseCategories_block_1_list_main_txt_1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    color:#333333;
-    margin: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #333333;
+  margin: 10px;
 }
-
 
 .chooseCategories_block_1_list_main_txt_2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 450;
-    font-size: 13px;
-    line-height: 20px;
-    color:#828282;
-
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+  font-size: 13px;
+  line-height: 20px;
+  color: #828282;
 }
 
-
-
-
-
-
 .chooseCategories_block_2 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 
@@ -506,23 +483,22 @@
 
 
 .chooseCategories_block_2_img_woman {
-    width: 250px;
+  position: relative;
+  z-index: 1;
 }
 
-.chooseCategories_block_2_txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.chooseCategories_block_2_img_frame {
+  position: absolute;
+  z-index: 2;
 }
 
 .chooseCategories_block_2_txt_1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 30px;
-    color:#F2994A;
-    margin: 20px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+  font-size: 24px;
+  line-height: 34px;
+  color: #f2994a;
+  margin: 20px 0;
 }
 
 .chooseCategories_block_2_txt_2 {
@@ -534,8 +510,6 @@
     margin: 20px 0;
 }
 
-
-
 .chooseCategories_block_2_txt_3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
@@ -545,7 +519,6 @@
     margin: 20px 0;
     padding: 10px;
 }
-
 
 .chooseCategories_block_2_txt_btn {
     width: 150px;
@@ -560,10 +533,4 @@
     margin: 0px 0;
     border: none;
 }
-
-
 }
-
-
-
-

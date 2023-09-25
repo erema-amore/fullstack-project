@@ -10,7 +10,7 @@ import {
 import { clearOnePostState } from "../../store/post/postSlice";
 import { isUserLogin } from "../../helpers/functions";
 
-const PostDetails = () => {
+export const PostDetails = () => {
   const { loading, onePost } = useSelector((state) => state.posts);
   const [showReviewForm, setShowReviewForm] = useState(false);
   const [reviewContent, setReviewContent] = useState("");
@@ -111,5 +111,3 @@ const PostDetails = () => {
     </div>
   );
 };
-
-export default PostDetails;
