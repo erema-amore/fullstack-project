@@ -38,7 +38,7 @@ const MainRoutes = () => {
       <Route path="/post-list/" element={<PostListTest/>} />
      
     </Routes>
-  );  
+  );
 };
 
 export default MainRoutes;
