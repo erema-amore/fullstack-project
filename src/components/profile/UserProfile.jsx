@@ -1,19 +1,24 @@
-import React, { useEffect }from 'react'
+import React, { useEffect}from 'react'
 import { useDispatch, useSelector} from 'react-redux';
 import { getOneUser } from '../../store/user/userAction';
 import { useNavigate } from 'react-router-dom';
 import styles from './userProfile.module.css'; 
 
 const UserProfile = () => {
+
   const { profile } = useSelector(state => state.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+
 
   useEffect(() => {
     dispatch(getOneUser());
   }, []);
 
+const fileName = profile.user_resume ? profile.user_resume.split('/').pop() : "";
+
   return (
+
     <div className={styles.main}>
     <div className={styles.container}> 
       <img className={styles.profileImage} src={profile.image} alt={profile.name} width="50" height="50" />
@@ -24,6 +29,7 @@ const UserProfile = () => {
       <iframe className={styles.resumeFrame} src={profile.user_resume} width="100%" height="250px"></iframe>
       <button className={styles.updateButton} onClick={() => navigate("/profile-update/user/") }>Update Profile</button>
     </div>
+
     </div>
   )
 }

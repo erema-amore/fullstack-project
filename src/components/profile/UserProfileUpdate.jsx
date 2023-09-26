@@ -7,8 +7,10 @@ import styles from './userProfileUpdate.module.css';
 const UserProfileUpdate = () => {
   const { profile } = useSelector(state => state.user);
   const [editProfile, setEditProfile] = useState(profile);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
 
   useEffect(() => {
     dispatch(getOneUser());
@@ -20,7 +22,9 @@ const UserProfileUpdate = () => {
     }
   }, [editProfile]);
 
+
   return (
+
     <div className={styles.main}>
     <div className={styles.container}>
       {profile && (
@@ -39,6 +43,7 @@ const UserProfileUpdate = () => {
       )}
     </div>
     </div>
+
   )
 }
 
