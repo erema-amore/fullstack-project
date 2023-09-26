@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 const RecruiterProfileUpdate = () => {
-  const {profile, loading} = useSelector(state => state.recruiter)
+  const {profile} = useSelector(state => state.recruiter)
   const [editProfile, setEditProfile] = useState(profile);
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -38,8 +38,6 @@ useEffect(() => {
               <button onClick={() => dispatch(updateRecruiterProfile({ editProfile, navigate }))}>Save profile changes</button>
         </>
       )}
-              
-
     </div>
   )
 }

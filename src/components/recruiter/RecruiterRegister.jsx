@@ -24,7 +24,7 @@ const RecruiterRegister = () => {
     <div className={styles.main}>
       
     <div className={styles.container}>
-      <h3 className={styles.heading}>Регистрация</h3>
+      <h3 className={styles.heading}> Recruiter Регистрация</h3>
       {status === 'error' ? (
         <>
           <h3 className={styles.errorMessage}>Произошла ошибка, попробуйте еще раз!</h3>
