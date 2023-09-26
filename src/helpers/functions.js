@@ -40,6 +40,7 @@ export const refreshUserToken = () => {
   }, 1000*60*4 );
 }
 
+
 export const logout = () => {
   console.log('logout');
   localStorage.removeItem('recruiter');
@@ -68,10 +69,14 @@ export const getAuthConfig = () => {
   const tokens = JSON.parse(localStorage.getItem('tokens'));
   if(!tokens) return false;
   const Authorization = `Bearer ${tokens.access}`;
+
   const config = {
       headers: {
           Authorization
       }
   };
   return config;
+
 };
+
+
