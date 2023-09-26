@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerUser, loginUser} from './userAction';
+import { registerUser, loginUser, getOneUser, updateUserProfile } from './userAction';
 import { refreshUserToken, addUserDataToLocalStorage } from '../../helpers/functions'
 
 const userSlice = createSlice({
     name: 'user',
     initialState: {
         currentUser: null,
-        status: ''
+        status: '',
+        profile: [],
+        editProfile: null
     },
     reducers: {
         clearCurrentAccount: (state) => {
@@ -33,6 +35,20 @@ const userSlice = createSlice({
         })
         .addCase(loginUser.rejected, (state) => {
             state.status = 'error';
+        })
+        .addCase(getOneUser.pending, (state) => {
+            state.loading = true;
+        })
+        .addCase(getOneUser.fulfilled, (state, action) => {
+            state.loading = false;
+            state.profile = action.payload.data;
+            console.log(state.profile);
+        })
+        .addCase(getOneUser.rejected, (state) => {
+            state.loading = true;
+        })
+        .addCase(updateUserProfile.fulfilled, (_, action) => {
+            action.payload.navigate('/profile/user/');
         })
     }
 })
