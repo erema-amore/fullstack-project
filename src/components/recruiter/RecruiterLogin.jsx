@@ -51,6 +51,7 @@ const RecruiterLogin = () => {
           >
             Войти
           </button>
+          <h5 onClick={() => navigate('/forgot-password/')}>Forgot Password?</h5>
         </div>
       )}
     </div>

@@ -21,12 +21,13 @@ const fileName = profile.user_resume ? profile.user_resume.split('/').pop() : ""
 
     <div className={styles.main}>
     <div className={styles.container}> 
-      <img className={styles.profileImage} src={profile.image} alt={profile.name} width="50" height="50" />
+      <img className={styles.profileImage} src={`http://35.224.14.145${profile.image}`} alt={profile.name} width="50" height="50" />
       <h3 className={styles.heading}>User Name: {profile.name}</h3>
       <h4 className={styles.userInfo}>User Surname: {profile.surname}</h4>
       <h4 className={styles.userInfo}>User contact email: {profile.email}</h4>
       <h4 className={styles.userInfo}>Summary/objectives: {profile.about_user}</h4>
-      <iframe className={styles.resumeFrame} src={profile.user_resume} width="100%" height="250px"></iframe>
+      <h4 className={styles.userInfo}>Resume: {fileName}</h4>
+      {/* <iframe className={styles.resumeFrame} src={profile.user_resume} width="100%" height="250px"></iframe> */}
       <button className={styles.updateButton} onClick={() => navigate("/profile-update/user/") }>Update Profile</button>
     </div>
 

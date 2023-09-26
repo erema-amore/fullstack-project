@@ -1,6 +1,10 @@
 #navbar {
   background: #fff5ec;
 }
+
+.burger {
+  display: none;
+}
 .navbar__container {
   padding-top: 2%;
   max-width: 90%;
@@ -51,4 +55,13 @@
   padding: 5%;
   border-radius: 14px;
   color: #ffffff;
+}
+
+@media(max-width: 768px) {
+  .navbar__container {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
 }

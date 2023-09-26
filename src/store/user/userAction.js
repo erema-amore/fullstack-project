@@ -60,3 +60,26 @@ export const updateUserProfile = createAsyncThunk(
         return { data, navigate };
     }
 );
+
+export const forgotPassword = createAsyncThunk(
+    'user/forgotPassword',
+    async ({ userObj, navigate }) => {
+        let formData = new FormData();
+        formData.append('email', userObj.email);
+        let { data } = await axios.post(`${API}/account/forgot-pass/`, formData);
+        return { data, navigate, userEmail: userObj.email };
+    }
+);
+
+export const changeNewPassword = createAsyncThunk(
+    'user/changeNewPassword',
+    async ({ userObj, navigate }) => {
+        let formData = new FormData();
+        formData.append('code', userObj.code);
+        formData.append('email', userObj.email);
+        formData.append('password', userObj.password);
+        formData.append('password_confirm', userObj.passwordConfirm);
+        let { data } = await axios.post(`${API}/account/forgot-pass-compl/`, formData);
+        return { data, navigate };
+    }
+);
