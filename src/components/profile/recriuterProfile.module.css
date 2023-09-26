@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+
+
 .main {
     background: #FFF5EC;
     height: 100vh;
     padding: 50px;
 }
+
 
 
 
@@ -14,54 +20,36 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-
-
-  .register_block {
-    display: flex;
-    flex-direction: column;
-    
-    
+  
+  .heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    margin-bottom: 20px;
   }
-
-
-  .inputField {
-    width: 100%;
-    padding: 10px;
+  
+  .info {
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
   }
-
+  
+  .about {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
   
   .button {
     padding: 10px 20px;
-    margin-bottom: 10px;
     background-color: #F2994A;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    
   }
   
   .button:hover {
     background-color: #efae75;
   }
-  
-  .heading {
-    font-size: 24px;
-    margin-bottom: 10px;
-    
-  }
-  
-  .text {
-    font-size: 16px;
-    margin-bottom: 20px;
-    
-  }
-
-
-
   

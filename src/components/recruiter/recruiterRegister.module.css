@@ -3,7 +3,7 @@
 .main {
     background: #FFF5EC;
     height: 200vh;
-    padding: 50px;
+    padding: 10px;
 }
 
 .container {
@@ -76,7 +76,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 75%;
     margin: 5px;
   }
 
@@ -89,7 +89,7 @@
   .block_1_txt_1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 45px;
     align-self: center;
     color: #333333;
@@ -100,7 +100,7 @@
   .block_1_txt_2 {
     font-family: "Poppins", sans-serif;
     font-weight: 450;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 40px;
     color: #333333;
     margin: 10px 0;
