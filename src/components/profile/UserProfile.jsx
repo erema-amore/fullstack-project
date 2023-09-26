@@ -26,7 +26,8 @@ const fileName = profile.user_resume ? profile.user_resume.split('/').pop() : ""
       <h4 className={styles.userInfo}>User Surname: {profile.surname}</h4>
       <h4 className={styles.userInfo}>User contact email: {profile.email}</h4>
       <h4 className={styles.userInfo}>Summary/objectives: {profile.about_user}</h4>
-      <iframe className={styles.resumeFrame} src={profile.user_resume} width="100%" height="250px"></iframe>
+      <h4 className={styles.userInfo}>Resume: {fileName}</h4>
+      {/* <iframe className={styles.resumeFrame} src={profile.user_resume} width="100%" height="250px"></iframe> */}
       <button className={styles.updateButton} onClick={() => navigate("/profile-update/user/") }>Update Profile</button>
     </div>
 

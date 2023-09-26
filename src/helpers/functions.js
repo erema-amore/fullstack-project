@@ -69,14 +69,12 @@ export const getAuthConfig = () => {
   const tokens = JSON.parse(localStorage.getItem('tokens'));
   if(!tokens) return false;
   const Authorization = `Bearer ${tokens.access}`;
-
   const config = {
       headers: {
           Authorization
       }
   };
   return config;
-
 };
 
 

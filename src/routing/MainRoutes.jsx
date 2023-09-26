@@ -16,6 +16,8 @@ import RecruiterPage from "../pages/recruiterPage/RecruiterPage";
 import UserProfilePage from "../pages/profilePage/UserProfilePage";
 import UserProfileUpdatePage from "../pages/profilePage/UserProfileUpdatePage";
 import PostListTest from '../components/posts/PostListTest'
+import ForgotPasswordPage from "../pages/password/ForgotPasswordPage";
+import AddNewPasswordPage from "../pages/password/AddNewPasswordPage"
 
 const MainRoutes = () => {
   return (
@@ -36,6 +38,8 @@ const MainRoutes = () => {
       <Route path="/posts/" element={<PostsListPage/>} />
       <Route path="/post-create/" element={<PostCreatePage/>} />
       <Route path="/post-list/" element={<PostListTest/>} />
+      <Route path="/forgot-password/" element={<ForgotPasswordPage/>}/>
+      <Route path="/new-password/" element={<AddNewPasswordPage/>}/>
      
     </Routes>
   );

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerUser, loginUser, getOneUser, updateUserProfile } from './userAction';
+import { registerUser, loginUser, getOneUser, updateUserProfile, forgotPassword, changeNewPassword } from './userAction';
 import { refreshUserToken, addUserDataToLocalStorage } from '../../helpers/functions'
 
 const userSlice = createSlice({
@@ -49,6 +49,17 @@ const userSlice = createSlice({
         })
         .addCase(updateUserProfile.fulfilled, (_, action) => {
             action.payload.navigate('/profile/user/');
+        })
+        .addCase(forgotPassword.fulfilled, (state, action) => {
+            state.currentUser = action.payload.userEmail;
+            action.payload.navigate('/new-password/');
+            console.log('forgot password');
+        })
+        .addCase(changeNewPassword.fulfilled, (_, action) => {
+            action.payload.navigate('/account/user-log/');
+        })
+        .addCase(changeNewPassword.rejected, (state) => {
+            state.status = 'user error';
         })
     }
 })

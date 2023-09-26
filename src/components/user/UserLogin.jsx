@@ -51,6 +51,7 @@ const UserLogin = () => {
             >
               Войти
             </button>
+            <h5  onClick={() => navigate('/forgot-password/')}>Forgot password ?</h5>
           </div>
         )}
       </div>
