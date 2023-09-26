@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { clearStatus } from '../../store/user/userSlice';
 import { registerUser } from '../../store/user/userAction';
-
+import styles from './userRegister.module.css'; 
 
 const UserRegister = () => {
   const [userObj, setUserObj] = useState({
@@ -20,45 +20,60 @@ const UserRegister = () => {
   }, [dispatch]);
 
   return (
-    <div>
-    <div >
-      <h3 >USER Регистрация</h3>
-      {status === 'error' ? (
-        <>
-          <h3 >Произошла ошибка, попробуйте еще раз!</h3>
-          <button  onClick={() => dispatch(clearStatus())}>Попробовать снова</button>
-        </>
-      ) : (
-        <div>
-          <input type="email" 
-           placeholder="Email" 
-           onChange={(e) => setUserObj({ ...userObj, email: e.target.value})} />
+    <div className={styles.main}>
+    <div className={styles.container}>
+      <div>
+        <h3 className={styles.heading}>USER Регистрация</h3>
+        {status === 'error' ? (
+          <>
+            <h3 className={styles.errorMsg}>Произошла ошибка, попробуйте еще раз!</h3>
+            <button className={styles.button} onClick={() => dispatch(clearStatus())}>Попробовать снова</button>
+          </>
+        ) : (
+          <div className={styles.register_block}>
+            <input
+              className={styles.inputField}
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setUserObj({ ...userObj, email: e.target.value})}
+            />
 
+            <input
+              className={styles.inputField}
+              type="password"
+              minLength="6"
+              placeholder="Пароль"
+              onChange={(e) => setUserObj({ ...userObj, password: e.target.value})}
+            />
 
-          <input
-            
-            type="password"
-            minLength="6"
-            placeholder="Пароль"
-            onChange={(e) => setUserObj({ ...userObj, password: e.target.value})}
-          />
+            <input
+              className={styles.inputField}
+              type="password"
+              minLength="6"
+              placeholder="Подтвердите пароль"
+              onChange={(e) => setUserObj({ ...userObj, passwordConfirm: e.target.value})}
+            />
 
-          <input
-            
-            type="password"
-            minLength="6"
-            placeholder="Подтвердите пароль"
-            onChange={(e) => setUserObj({ ...userObj, passwordConfirm: e.target.value})}
-          />
-
-          <button onClick={() => dispatch(registerUser({ userObj, navigate }))} >
-            Зарегистрироваться
-          </button>
-        </div>
-      )}
+            <button
+              className={styles.button}
+              onClick={() => dispatch(registerUser({ userObj, navigate }))}
+            >
+              Зарегистрироваться
+            </button>
+          </div>
+        )}
+      </div>
     </div>
     </div>
   );
 }
 
-export default UserRegister
+export default UserRegister;
+
+
+
+
+
+
+
+
