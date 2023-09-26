@@ -115,7 +115,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  gap: 40px;
+  
 }
 
 .jobDreams_block_2_txt {
@@ -128,8 +128,371 @@
 }
 
 .jobDreams_block_2_list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px; 
+    margin: 30px 0;
+}
+
+
+
+
+@media(max-width: 1440px){
+    .jobDreams_block_1 {
+        background: #FFF5EC;
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 10px;
+    }
+
+    .jobDreams_block_1_img_woman {
+        width: 90%;
+      
+    }
+
+    .jobDreams_block_1_txt_1_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 70px;
+        line-height: 1;
+        color: #16171C;
+        margin: 10px 0;
+    }
+
+    .jobDreams_block_1_txt_1_2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 29.44px;
+        color: #4F4F4F;
+        margin: 10px 0;
+    }
+
+    .jobDreams_block_1_txt_1_3 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 450;
+        font-size: 23px;
+        line-height: 30px;
+        color: #333333;
+        margin: 10px 0;
+    }
+
+    .jobDreams_block_1_txt_2_str {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 650;
+        font-size: 19px;
+        line-height: 25px;
+        color: #F2994A;
+        margin: 10px 0;
+    }
+
+    .jobDreams_block_1_txt_3_str {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 28px;
+        color: #828282;
+    }
+
+
+    .jobDreams_block_1_txt_3_btn {
+        width: 127.47px;
+        height: 45.82px;
+        border-radius: 31.54px;
+        background:  #F2994A;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 29.44px;
+        color: #FFFFFF;
+        border: none;
+    }
+
+    .jobDreams_block_2_txt {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 650;
+        font-size: 23px;
+        line-height: 34px;
+        color: #333333;
+        margin: 60px 0;
+    }
+
+   
+
+}
+
+
+
+
+
+@media(max-width: 768px){
+
+   
+
+    .jobDreams_block_1 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        
+        
+    }
+
+    .jobDreams_block_1_img_woman {
+      
+    }
+
+
+
+
+    .jobDreams_block_1_txt_1_1 {
+        display: flex;
+        justify-content: space-evenly;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.5;
+        color: #16171C;
+        align-self: center;
+    }
+
+
+    .jobDreams_block_1_txt_1_2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 29.44px;
+        color: #4F4F4F;
+        margin: 10px 0;
+        align-self: center;
+    
+    }
+
+    .jobDreams_block_1_txt_1_3 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 450;
+        font-size: 20px;
+        line-height: 25px;
+        color: #333333;
+        margin: 20px 0;
+        padding: 0px;
+        align-self: center;
+    }
+
+
+   
+    .jobDreams_block_1_txt_2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 650;
+        font-size: 23px;
+        line-height: 34px;
+        color: #333333;
+        margin: 0px 0;
+        padding: 0px;
+        align-self: center;
+
+    }
+
+    .jobDreams_block_1_txt_3_main {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+
+    .jobDreams_block_1_txt_3  {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        background:#FFFFFF;
+        border-radius: 31.54px;
+        width: 700px;
+        height: 65px;
+        padding: 10px;
+    }
+
+
+    .jobDreams_block_1_txt_3_str {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 28px;
+        color: #828282;
+    }
+
+    .jobDreams_block_1_txt_3_btn {
+        width: 100;
+        height: 35;
+        border-radius: 31.54px;
+        background:  #F2994A;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        color: #FFFFFF;
+        border: none;
+    }
+
+
+    .jobDreams_block_1_img {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .jobDreams_block_1_img_woman {
+        width: 90%;
+    }
+
+    
+    
+
+    .jobDreams_block_2_txt {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+        color: #333333;
+        margin: 20px 0;
+    }
+
+
+    .jobDreams_block_2_list_main_img {
+        width: 100px;
+        gap: 5px;
+       
+    }   
+}
+
+
+
+
+
+@media(max-width: 320px) {
+    .jobDreams_block_1 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    
+
+    .jobDreams_block_1_txt_1_1 {
+        font-weight: 350;
+        font-size: 30px;
+        line-height: 1,5;
+        color: #16171C;
+        align-self: center;
+    }
+
+    .jobDreams_block_1_txt_1_2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 29.44px;
+        color: #4F4F4F;
+        margin: 0px 0;
+        padding: 30px;
+        align-self: center;
+    }
+
+    .jobDreams_block_1_txt_1_3 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 35.33px;
+        color: #333333;
+        margin: 0px 0;
+        padding: 0;
+        align-self: center;
+    }
+
+    .jobDreams_block_1_txt_2 {
+        margin: 5px;
+    }
+
+
+    .jobDreams_block_1_txt_2_str {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 29.44px;
+        color: #F2994A;
+        margin: 0px 0;
+        padding: 0;
+    }
+
+    .jobDreams_block_1_txt_3 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background:#FFFFFF;
+        border-radius: 31.54px;
+        width: 200px;
+        height: 155px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .jobDreams_block_1_txt_3_str {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 28px;
+        color: #828282;
+        margin: 0;
+        padding: 0;
+    }
+
+    .jobDreams_block_1_txt_3_btn {
+        width: 100;
+        height: 35;
+        border-radius: 31.54px;
+        background:  #F2994A;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+        border: none;
+    }
+
+    .jobDreams_block_1_txt_3_str img {
+        width: 20px;
+        
+    }
+
+    .jobDreams_block_2 {
+        margin: 0;
+    }
+
+    .jobDreams_block_2_txt {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14;
+        color: #333333;
+        padding: 30px;
+        margin: 0;
+        align-self: center;
+    }
+
+    .jobDreams_block_2_list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 20px;
+        margin: 20px;
+    }
+
 }

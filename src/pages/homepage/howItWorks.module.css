@@ -16,7 +16,7 @@
 
 .howItWorks_container {
     background: #FFF5EC;
-    padding: 40px;
+    /* padding: 40px; */
 
 }
 
@@ -371,7 +371,7 @@
 }
 
 .howItWorks_block_2 {
-    width: 800px;
+    width: 730px;
     height: 200px;
     border-radius: 84.12px;
     background: #F2994A;
@@ -451,7 +451,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        
     }
 
 
@@ -468,7 +468,7 @@
     .howItWorks_block_1_list_2 {
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 45px;
         color:  #333333;
         margin: 20px 0;
@@ -478,8 +478,8 @@
 
     .howItWorks_block_1_list_3 {
         font-family: 'Poppins', sans-serif;
-        font-weight: 200;
-        font-size: 12px;
+        font-weight: 300;
+        font-size: 11px;
         line-height: 25px;
         color: #000000;
         margin: 10px 0;
@@ -489,7 +489,7 @@
 .howItWorks_block_1_list_4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 450;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 25px;
     color: #F2994A;
     margin: 10px 0;
@@ -501,7 +501,7 @@
 .howItWorks_block_1_list_5 {
     font-family: 'Poppins', sans-serif;
     font-weight: 250;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 25px;
     color: #000000;
     margin: 10px 0;
@@ -582,7 +582,6 @@
 
 
 .howItWorks_block_2_btn_2 {
-   
     width: 90px;
     height: 30px;
     border-radius: 31.54px;
@@ -593,13 +592,8 @@
     line-height: 25px;
     color: #FFFFFF;
     border: none;
+    
 }
-
-
-
-
-
-
 
 
 }
