@@ -8,7 +8,7 @@ const UserProfileUpdate = () => {
   const [editProfile, setEditProfile] = useState(profile);
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  console.log(editProfile);
+  console.log(editProfile.user_resume    );
 
   useEffect(() => {
     dispatch(getOneUser());
@@ -20,13 +20,15 @@ useEffect(() => {
   }
 }, [editProfile]);
 
+
   return (
     <div>
     {profile && (
       <>
       <h3>Update Your Profile</h3>
+      
            <p>upload your profile image</p>
-            <input type="file" accept="image/*" onChange={(e) => setEditProfile({ ...editProfile, image: e.target.files[0] })} />
+           <input type="file"  accept="image/*" onChange={(e) => {setEditProfile({ ...editProfile, image: e.target.files[0] }); }} />
 
             <input type="text" placeholder="Name" value={editProfile.name} onChange={(e) => setEditProfile({ ...editProfile, name: e.target.value })} />
 

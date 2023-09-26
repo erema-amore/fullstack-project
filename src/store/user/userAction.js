@@ -41,11 +41,20 @@ export const updateUserProfile = createAsyncThunk(
     'user/updateUserProfile',
     async ({ editProfile, navigate }, { dispatch }) => {
         const config = getAuthConfig();
+        console.log(typeof(editProfile.image) === 'object');
         const updateUserProfile= new FormData();
         updateUserProfile.append('name', editProfile.name);
         updateUserProfile.append('surname', editProfile.surname);
         updateUserProfile.append('email', editProfile.email);
         updateUserProfile.append('about_user', editProfile.about_user);
+        if(typeof(editProfile.image) === 'object' && (editProfile.image !== null)) {
+            console.log('WORK');
+            updateUserProfile.append('image', editProfile.image);
+        };
+        if(typeof(editProfile.user_resume) === 'object'  && (editProfile.user_resume !== null)) {
+            console.log('work2');
+            updateUserProfile.append('user_resume', editProfile.user_resume);
+        };
         const { data } = await axios.patch(`${API}/profile/user/`, updateUserProfile, config);
         dispatch(getOneUser());
         return { data, navigate };
