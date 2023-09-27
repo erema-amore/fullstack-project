@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './howItWorks.module.css'
-import woman from '../../img/HomePage/howItWorks_beautiful-woman-listening-music-chatting-using-headphones-laptop-while-sitting-with-legs-crossed-floor-white-wall 1.svg'
+import woman from '../../img/HomePage/howItWorks_beautiful-woman.svg'
 
 const HowItWorks = () => {
   return (

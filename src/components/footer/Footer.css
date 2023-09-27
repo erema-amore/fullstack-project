@@ -92,7 +92,14 @@
   margin-bottom: 5%;
 }
 
-
+@media(max-width: 768px){
+  .footer__main__block_first_descr {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 250;
+    line-height: 150%;
+  }
+}
 
 
 @media(max-width: 320px) {
