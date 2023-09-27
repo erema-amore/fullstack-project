@@ -102,7 +102,7 @@
 }
 
 
-@media(max-width: 320px) {
+@media(max-width: 375px) {
   .footer__main__block {
     margin-top: 4%;
     display: flex;
@@ -110,7 +110,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    
   }
 
   .footer__main__block_first {
@@ -119,11 +119,15 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: 20px;
+    
   }
 
   .footer__main__block_second{
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
   }
 
   .footer__main__block_third {
