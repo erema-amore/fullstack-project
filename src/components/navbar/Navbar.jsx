@@ -141,13 +141,13 @@ const handleClose = () => {
           <>
           <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <Logout fontSize="small" />
+            <Logout fontSize="small" onClick={() => {logoutUser(); navigate('/'); }} />
           </ListItemIcon>
           Logout
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <PersonAdd fontSize="small" />
+            <PersonAdd fontSize="small" onClick={() => navigate('/profile/user/')}  />
           </ListItemIcon>
           User Profile
         </MenuItem>
@@ -158,19 +158,19 @@ const handleClose = () => {
             <>
             <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <Settings fontSize="small" />
+            <Settings fontSize="small" onClick={() => navigate('/post-create/')} />
           </ListItemIcon>
           Create Post
         </MenuItem>   
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <PersonAdd fontSize="small" />
+            <PersonAdd fontSize="small" onClick={() => {logout(); navigate('/'); }} />
           </ListItemIcon>
           Recruiter Profile
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <Logout fontSize="small" />
+            <Logout fontSize="small" onClick={() => {logout(); navigate('/'); }} />
           </ListItemIcon>
           Recruiter Logout
         </MenuItem>
