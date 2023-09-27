@@ -44,14 +44,17 @@ const UserLogin = () => {
               placeholder="Пароль"
               onChange={(e) => setUserObj({ ...userObj, password: e.target.value})}
             />
-
+            <div className={styles.button_main}>
             <button
               className={styles.button}
               onClick={() => dispatch(loginUser({ userObj, navigate }))}
             >
               Войти
             </button>
-            <h5  onClick={() => navigate('/forgot-password/')}>Forgot password ?</h5>
+            <button
+            className={styles.button}  
+            onClick={() => navigate('/forgot-password/')}>Forgot password ?</button>
+            </div>
           </div>
         )}
       </div>

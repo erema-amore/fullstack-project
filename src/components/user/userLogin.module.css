@@ -34,6 +34,12 @@
     border-radius: 5px;
     font-size: 16px;
   }
+
+  .button_main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   
   .button {
     padding: 10px 20px;
@@ -49,3 +55,11 @@
     background-color: #efae75;
   }
   
+
+
+  @media(max-width: 320px) {
+    .button {
+      font-size: 14px;
+      
+    }
+  }
