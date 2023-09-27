@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { createPost, getCategories } from "../../store/post/postAction";
+import { createPost} from "../../store/post/postAction";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styles from "./postCreate.module.css"
@@ -16,9 +16,9 @@ const PostCreate = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(getCategories());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getCategories());
+  // }, [dispatch]);
 
   return (
     <div className={styles.main}>

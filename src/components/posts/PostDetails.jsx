@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getOnePost,
+import {  getOnePost,
   createReview,
   deleteReview,
   toggleFavorite,
+  deletePost,
+  updatePost
 } from "../../store/post/postAction";
 import { clearOnePostState } from "../../store/post/postSlice";
-import { isUserLogin } from "../../helpers/functions";
+import { isUserLogin, isUUserLogin } from "../../helpers/functions";
+import { useNavigate } from "react-router-dom";
 
 const PostDetails = () => {
   const { loading, onePost } = useSelector((state) => state.posts);
@@ -16,6 +18,8 @@ const PostDetails = () => {
   const [reviewContent, setReviewContent] = useState("");
   const { id } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+  console.log(onePost);
 
   useEffect(() => {
     dispatch(getOnePost({ id }));
@@ -35,18 +39,19 @@ const PostDetails = () => {
               <h3>{onePost.experience}</h3>
               <h3>{onePost.salary}</h3>
               <p>{onePost.description}</p>
-              {isUserLogin() && (
-                <button
-                  onClick={() =>
-                    dispatch(toggleFavorite({ postId: onePost.id }))
-                  }
-                >
-                  {onePost.favorite
-                    ? "Remove from favorites"
-                    : "Add to favorites"}
-                </button>
+              {isUUserLogin()  && (
+                <>
+                <button>Apply</button>
+                <button onClick={() => dispatch(toggleFavorite({ postId: onePost.id })) }>  {onePost.favorite  ? "Remove from favorites" : "Add to favorites"} </button>
+                </>
               )}
-              <h3>Reviews:</h3>
+              {isUserLogin() && (
+                <>
+                <button onClick={() => navigate(`/post-update/${onePost.id}`)}>Update</button>
+                <button onClick={() => dispatch(deletePost({ id: onePost.id , navigate}))}>Delete</button>
+                </>
+              )}
+              {/* <h3>Reviews:</h3>
               {isUserLogin() && (
                 <button onClick={() => setShowReviewForm(!showReviewForm)}>
                   Add review
@@ -77,9 +82,9 @@ const PostDetails = () => {
                     Add Comment
                   </button>
                 </div>
-              )}
+              )} */}
 
-              {onePost.reviews.length > 0 && (
+              {/* {onePost.reviews.length > 0 && (
                 <>
                   {onePost.reviews.map((review) => (
                     <div key={review.id}>
@@ -103,7 +108,7 @@ const PostDetails = () => {
                     </div>
                   ))}
                 </>
-              )}
+              )} */}
             </div>
           )}
         </div>

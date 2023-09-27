@@ -6,6 +6,7 @@ import {
   getCategories,
   updatePost,
   getFavorites,
+  deletePost
 } from "./postAction";
 const postSlice = createSlice({
   name: "posts",
@@ -43,7 +44,6 @@ const postSlice = createSlice({
         state.loading = true;
       })
       .addCase(getOnePost.fulfilled, (state, action) => {
-        console.log(getOnePost);
         state.loading = false;
         state.onePost = action.payload;
       })
@@ -53,9 +53,9 @@ const postSlice = createSlice({
       .addCase(createPost.fulfilled, (_, action) => {
         action.payload.navigate("/");
       })
-      .addCase(getCategories.fulfilled, (state, action) => {
-        state.categories = action.payload.results;
-      })
+      // .addCase(getCategories.fulfilled, (state, action) => {
+      //   state.categories = action.payload.results;
+      // })
       .addCase(updatePost.fulfilled, (_, action) => {
         action.payload.navigate("/");
       })
@@ -68,7 +68,10 @@ const postSlice = createSlice({
       })
       .addCase(getFavorites.rejected, (state) => {
         state.loading = false;
-      });
+      })
+      .addCase(deletePost.fulfilled, (_, action) => {
+        action.payload.navigate('/posts/')
+      })
   },
 });
 

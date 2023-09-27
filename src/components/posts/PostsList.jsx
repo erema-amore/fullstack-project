@@ -6,7 +6,7 @@ import "./postsList.css";
 
 const PostsList = () => {
   const { posts, loading } = useSelector((state) => state.posts);
-  // console.log(posts);
+  console.log(posts);
 
   const { favorites } = useSelector((state) => state.posts.favorites);
   console.log(favorites);
@@ -28,7 +28,7 @@ const PostsList = () => {
             ) : (
               <div className="postCard">
                 {posts.map((post) => (
-                  <PostItem key={post.id} favorites={favorites} post={post} />
+                  <PostItem key={post.pk} favorites={favorites} post={post} />
                 ))}
               </div>
             )}

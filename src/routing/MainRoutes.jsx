@@ -34,7 +34,7 @@ const MainRoutes = () => {
       <Route path="/profile/req/" element={<RecruiterProfilePage />} />
       <Route path="/profile-update/req/" element={<RecruiterProfileUpdatePage />} />
       <Route path="/post-update/:id/" element={<PostUpdatePage />} />
-      {/* <Route path="/post/:id/" element={<PostDetailsPage />} /> */}
+      <Route path="/post/:id/" element={<PostDetailsPage />} />
       <Route path="/posts/" element={<PostsListPage/>} />
       <Route path="/post-create/" element={<PostCreatePage/>} />
       <Route path="/post-list/" element={<PostListTest/>} />

@@ -49,20 +49,20 @@ export const createPost = createAsyncThunk(
   }
 );
 
-export const getCategories = createAsyncThunk(
-  "posts/getCategories",
-  async () => {
-    const { data } = await axios.get(`${API}/category/list/`);
-    return data;
-  }
-);
+// export const getCategories = createAsyncThunk(
+//   "posts/getCategories",
+//   async () => {
+//     const { data } = await axios.get(`${API}/category/list/`);
+//     return data;
+//   }
+// );
 
 export const updatePost = createAsyncThunk(
   "posts/updatePost",
   async ({ post, navigate }, { dispatch }) => {
     const config = getAuthConfig();
     const updatedPost = new FormData();
-    updatedPost.append("company_name", post.companyName);
+    updatedPost.append("company_name", post.company_name);
     updatedPost.append("vacancy", post.vacancy);
     updatedPost.append("experience", post.experience);
     updatedPost.append("salary", post.salary);
@@ -70,7 +70,7 @@ export const updatePost = createAsyncThunk(
     const { data } = await axios.patch(
       `${API}/posts/${post.id}/`,
       updatedPost,
-      config
+      config ? config : null
     );
     dispatch(getPosts());
     return { data, navigate };
@@ -79,11 +79,13 @@ export const updatePost = createAsyncThunk(
 
 export const deletePost = createAsyncThunk(
   "posts/deletePost",
-  async ({ id }, { dispatch }) => {
+  async ({ id,navigate }, { dispatch }) => {
     const config = getAuthConfig();
-    const { data } = await axios.delete(`${API}/posts/${id}/`, config);
+    console.log(id);
+    console.log(config);
+    const { data } = await axios.delete( `${API}/posts/${id}/`, config ? config : null);
     dispatch(getPosts());
-    return { data };
+    return { data, navigate };
   }
 );
 

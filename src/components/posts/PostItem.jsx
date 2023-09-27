@@ -18,7 +18,7 @@ const PostItem = ({ post, favorites }) => {
       <div className="postItem__header__block">
         <div className="postItem__title__block">
           <h2 className="postItem__header">{post.vacancy}</h2>
-          <h3 className="postItem__company">{post.company_name}</h3>
+          <h3 className="postItem__company" onClick={() => navigate(`/post/${post.pk}`)}>{post.company_name}</h3>
         </div>
         <div className="postItem__img__block">
           <img src={compLogo} alt="error" />
