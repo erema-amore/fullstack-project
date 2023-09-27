@@ -55,7 +55,7 @@ const handleClose = () => {
         <div className="navbar__auth__block">
           {isUUserLogin() ? (
             <> 
-              <button onClick={() => {logoutUser(); navigate('/'); }}>User Logout</button>
+              <li onClick={() => {logoutUser(); navigate('/'); }}>User Logout</li>
             <li className="navbar__item" onClick={() => navigate('/profile/user/')} >Candidate Profile</li>
             </>
           ) : (
@@ -63,13 +63,13 @@ const handleClose = () => {
             {isUserLogin() ? (
               <>
                <li className="navbar__item" onClick={() => navigate('/post-create/')} >Create New Post</li>
-              <button onClick={() => {logout(); navigate('/'); }}>Recruiter Logout</button>
+              <li onClick={() => {logout(); navigate('/'); }}>Recruiter Logout</li>
               <li className="navbar__item" onClick={() => navigate('/profile/req/')}>Recruiter Profile</li>
               </>
             ) : (
               <>
-            <button className="navbar__login" onClick={() => navigate('/account/user-log/')}>Login</button>
-            <button className="navbar__register" onClick={() => navigate('/account/user-reg/')}>Sign Up</button>
+            <li className="navbar__login" onClick={() => navigate('/account/user-log/')}>Login</li>
+            <li className="navbar__register" onClick={() => navigate('/account/user-reg/')}>Sign Up</li>
             </>
             ) }
             </>
@@ -91,7 +91,7 @@ const handleClose = () => {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+            <Avatar sx={{ width: 32, height: 32 }}>Menu</Avatar>
           </IconButton>
         </Tooltip>
       </Box>
@@ -137,6 +137,7 @@ const handleClose = () => {
           <Avatar onClick={() => navigate('/recruiter/')}/> Employer
         </MenuItem>
         <Divider />
+        <div>
         {isUUserLogin() ? (
           <>
           <MenuItem onClick={handleClose}>
@@ -179,13 +180,13 @@ const handleClose = () => {
             <>
              <MenuItem onClick={handleClose}>
           <ListItemIcon>
-            <PersonAdd fontSize="small" />
+            <PersonAdd fontSize="small" onClick={() => navigate('/account/user-reg/')} />
           </ListItemIcon>
           Register
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
-          <PersonAdd fontSize="small" />
+          <PersonAdd fontSize="small" onClick={() => navigate('/account/user-log/')} />
           </ListItemIcon>
           Login
         </MenuItem>
@@ -193,7 +194,7 @@ const handleClose = () => {
           )}
           </>
         )}
-               
+         </div>      
       </Menu>
     </React.Fragment>
 

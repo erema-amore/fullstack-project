@@ -11,7 +11,6 @@ export default configureStore({
     }),
   reducer: {
     recruiter: recruiterReducer,
-
     user: userReducer,
     posts: postsReducer,
   },

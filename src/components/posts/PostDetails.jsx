@@ -46,7 +46,7 @@ const PostDetails = () => {
                     : "Add to favorites"}
                 </button>
               )}
-              <h3>Reviews:</h3>
+              {/* <h3>Reviews:</h3>
               {isUserLogin() && (
                 <button onClick={() => setShowReviewForm(!showReviewForm)}>
                   Add review
@@ -77,9 +77,9 @@ const PostDetails = () => {
                     Add Comment
                   </button>
                 </div>
-              )}
+              )} */}
 
-              {onePost.reviews.length > 0 && (
+              {/* {onePost.reviews.length > 0 && (
                 <>
                   {onePost.reviews.map((review) => (
                     <div key={review.id}>
@@ -103,7 +103,7 @@ const PostDetails = () => {
                     </div>
                   ))}
                 </>
-              )}
+              )} */}
             </div>
           )}
         </div>
