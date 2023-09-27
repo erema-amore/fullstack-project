@@ -294,7 +294,7 @@
 
 
 
-@media(max-width: 1024px) {
+@media(max-width: 1300px) {
 
 
     .howItWorks_block_1 {
@@ -440,7 +440,7 @@
 
 
 
-@media(max-width: 320px) {
+@media(max-width: 375px) {
 
     .howItWorks_block_1_img_woman {
         width: 250px;
