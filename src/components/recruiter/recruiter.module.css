@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
 .main {
     background: #FFF5EC;
-    height: 100vh;
+    height: 200vh;
     padding: 50px;
 }
 
@@ -19,12 +22,14 @@
 
 
   .block_btn {
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
   }
   
   .button {
+    font-family: "Poppins", sans-serif;
     padding: 10px 20px;
     margin-bottom: 10px;
     background-color: #F2994A;
@@ -33,7 +38,6 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    
   }
   
   .button:hover {
@@ -41,13 +45,77 @@
   }
   
   .heading {
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
     
   }
   
   .text {
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
   }
   
+
+
+  @media(max-width: 768px) {
+
+    .heading {
+      font-family: "Poppins", sans-serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+
+  }
+
+
+  @media(max-width: 320px) {
+
+    .block_btn {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 0px;
+    }
+
+
+    .button {
+      font-family: "Poppins", sans-serif;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      background-color: #F2994A;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .heading {
+      font-family: "Poppins", sans-serif;
+      font-size: 17px;
+      margin: 20px 0;
+      
+    }
+
+    .text {
+      font-family: "Poppins", sans-serif;
+      font-size: 12px;
+      margin: 20px 0 ;
+    }
+
+
+  }
+
+
+
+

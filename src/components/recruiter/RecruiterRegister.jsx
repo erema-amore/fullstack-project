@@ -26,7 +26,7 @@ const RecruiterRegister = () => {
   return (
     <div className={styles.main}>
         <div className={styles.block_1_main}>
-       <div className={styles.block_1}>  
+        <div className={styles.block_1}>  
           <p className={styles.block_1_txt_1}>Post your jobs where millions of qualified technology professionals are searching.</p>
           <p className={styles.block_1_txt_2}>Dice is a hiring platform that only does tech. If you’re hiring engineers, developers, analysts or technicians, you need to be on Dice.</p>
         </div>
