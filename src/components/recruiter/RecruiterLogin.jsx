@@ -20,7 +20,7 @@ const RecruiterLogin = () => {
 
   return (
     <div className={styles.main}>
-      <h3>Post your jobs where millions of qualified technology professionals are searching.</h3>
+      <h3 className={styles.main_txt}>Post your jobs where millions of qualified technology professionals are searching.</h3>
     <div className={styles.container}>
       <h3 className={styles.heading}>Recruiter Вход</h3>
       {status === 'error' ? (
