@@ -229,7 +229,7 @@
 
 
 
-@media(max-width: 1024px){
+@media(max-width: 1300px){
 
    
 
@@ -371,7 +371,7 @@
 
 
 
-@media(max-width: 320px) {
+@media(max-width: 375px) {
     .jobDreams_block_1 {
         display: flex;
         justify-content: space-evenly;

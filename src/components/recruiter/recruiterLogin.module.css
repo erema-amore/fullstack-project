@@ -44,6 +44,12 @@
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+  .button_main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   
   .button {
     width: 100%;
@@ -170,6 +176,8 @@
       font-size: 13px;
       cursor: pointer;
     }
+
+    
 
 
   }
