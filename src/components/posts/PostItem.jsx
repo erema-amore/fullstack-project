@@ -1,17 +1,24 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { deletePost } from "../../store/post/postAction";
+import {
+	deleteFavorite,
+	deletePost,
+	makeFavorite,
+} from "../../store/post/postAction";
 
 import "./postItem.css";
 import compLogo from "../../img/postList/postList_logo.svg";
 import favIcon from "../../icons/favorite-icon.svg";
 import favIconRed from "../../icons/favorite-icon-red.svg";
-import { isUserLogin } from "../../helpers/functions";
+import { getFavorite, isUserLogin } from "../../helpers/functions";
 
 const PostItem = ({ post, favorites }) => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+
+	const favorite = getFavorite(favorites, post.pk);
+	console.log(favorite);
 
 	return (
 		<div className="postItem__block">
@@ -30,13 +37,33 @@ const PostItem = ({ post, favorites }) => {
 					<h3 className="postItem__salary">{post.salary}$</h3>
 				</div>
 				<div className="postItem__block_second__actions__block">
-					<div className="postItem__block_second__actions__block__favorites">
-						{isUserLogin() && (
-							<button>
-								<img src={favIcon} alt="error" />
-							</button>
-						)}
-					</div>
+					{isUserLogin() && (
+						<div className="postItem__block_second__actions__block__favorites">
+							{!favorite ? (
+								<button
+									onClick={() => dispatch(makeFavorite({ postId: post.pk }))}
+									style={{
+										background: "none",
+										border: "none",
+										cursor: "pointer",
+									}}
+								>
+									<img src={favIcon} alt="error" />
+								</button>
+							) : (
+								<button
+									onClick={() => dispatch(deleteFavorite({ id: favorite.id }))}
+									style={{
+										background: "none",
+										border: "none",
+										cursor: "pointer",
+									}}
+								>
+									<img src={favIconRed} alt="error" />
+								</button>
+							)}
+						</div>
+					)}
 
 					{isUserLogin() && (
 						<>

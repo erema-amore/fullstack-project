@@ -59,9 +59,7 @@ const postSlice = createSlice({
 			.addCase(updatePost.fulfilled, (_, action) => {
 				action.payload.navigate("/");
 			})
-			.addCase(getFavorites.pending, (state) => {
-				state.loading = true;
-			})
+
 			.addCase(getFavorites.fulfilled, (state, action) => {
 				state.loading = false;
 				state.favorites = action.payload.data.results;

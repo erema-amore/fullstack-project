@@ -11,12 +11,13 @@ const PostsList = () => {
 		(state) => state.posts
 	);
 
-	const { favorites } = useSelector((state) => state.posts.favorites);
+	const { favorites } = useSelector((state) => state.posts);
 
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(getPosts());
+		dispatch(getFavorites());
 	}, [currentPage]);
 
 	return (

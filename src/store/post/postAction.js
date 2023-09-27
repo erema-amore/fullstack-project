@@ -112,6 +112,7 @@ export const deleteReview = createAsyncThunk(
 export const getFavorites = createAsyncThunk("posts/getFavorites", async () => {
 	const config = getAuthConfig();
 	const { data } = await axios.get(`${API}/favorites/`, config);
+	console.log(data);
 	return { data };
 });
 
@@ -121,6 +122,29 @@ export const toggleFavorite = createAsyncThunk(
 		const config = getAuthConfig();
 		const { data } = await axios.get(`${API}/posts/${id}/favorites/`, config);
 		dispatch(getOnePost({ id: postId }));
+		dispatch(getFavorites());
+		return { data };
+	}
+);
+
+export const makeFavorite = createAsyncThunk(
+	"posts/makeFavorite",
+	async ({ postId }, { dispatch }) => {
+		const config = getAuthConfig();
+		const { data } = await axios.post(
+			`${API}/posts/${postId}/favorite/`,
+			{ post: postId },
+			config
+		);
+		dispatch(getFavorites());
+		return { data };
+	}
+);
+export const deleteFavorite = createAsyncThunk(
+	"posts/deleteFavorite",
+	async ({ id }, { dispatch }) => {
+		const config = getAuthConfig();
+		const { data } = await axios.delete(`${API}/favorites/${id}/`, config);
 		dispatch(getFavorites());
 		return { data };
 	}
