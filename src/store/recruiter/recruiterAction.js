@@ -21,7 +21,7 @@ export const loginRecruiter = createAsyncThunk(
     let formData = new FormData();
     formData.append("email", recruiterObj.email);
     formData.append("password", recruiterObj.password);
-    let { data } = await axios.post(`${API}/account/rec-log/`, formData);
+    let { data } = await axios.post(`${API}/account/log/`, formData);
     return { data, navigate, recruiterEmail: recruiterObj.email };
   }
 );

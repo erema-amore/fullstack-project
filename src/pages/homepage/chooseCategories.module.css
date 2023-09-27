@@ -256,7 +256,7 @@
 
 
 
-@media(max-width: 1024px) {
+@media(max-width: 1300px) {
 
 
     .chooseCategories_main {
@@ -393,7 +393,7 @@
 
 
 
-@media(max-width: 320px) {
+@media(max-width: 375px) {
 
     .chooseCategories_block_1_txt {
         display: flex;

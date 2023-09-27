@@ -10,7 +10,7 @@ export const getPosts = createAsyncThunk(
 		const { currentPage } = getState().posts;
 		const config = getAuthConfig();
 		const { data } = await axios.get(
-			`${API}/posts/?page=${currentPage}`,
+			`${API}/posts/?page=${5}`,
 			config ? config : null
 		);
 		return data;

@@ -1,4 +1,128 @@
 
+.main {
+  background: #FFF5EC;
+  padding: 50px;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.postDetails {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.postHeader h3 {
+  font-size: 24px;
+}
+
+.postActions button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.postActions button.apply {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.postActions button.favorite {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.postActions button.update,
+.postActions button.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.postActions button:hover {
+  background-color: #0056b3;
+}
+
+.reviewForm {
+  margin-top: 20px;
+}
+
+.reviewForm input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.reviewForm button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reviewForm button:hover {
+  background-color: #0056b3;
+}
+
+.reviews {
+  margin-top: 20px;
+}
+
+.review {
+  margin-bottom: 10px;
+}
+
+.review span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.review button.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.review button.delete:hover {
+  background-color: #a71d2a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 .postDetailsContainer {
     font-family: Arial, sans-serif;
@@ -39,4 +163,4 @@
     cursor: pointer;
     margin-top: 10px;
   }
-  
+   */

@@ -44,14 +44,17 @@ const RecruiterLogin = () => {
             placeholder="Пароль"
             onChange={(e) => setRecruiterObj({ ...recruiterObj, password: e.target.value})}
           />
-
+          <div className={styles.button_main}>
           <button
             className={styles.button}
             onClick={() => dispatch(loginRecruiter({ recruiterObj, navigate }))}
           >
             Войти
           </button>
-          <h5 onClick={() => navigate('/forgot-password/')}>Forgot Password?</h5>
+          <button
+          className={styles.button}
+           onClick={() => navigate('/forgot-password/')}>Forgot Password?</button>
+           </div>
         </div>
       )}
     </div>

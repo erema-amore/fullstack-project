@@ -47,7 +47,9 @@ const Navbar = () => {
 					<img src={Logo} alt="error" onClick={() => navigate("/")} />
 				</div>
 				<ul className="navbar__titles">
-					<li className="navbar__item">Home</li>
+					<li className="navbar__item" onClick={() => navigate("/")}>
+						Home
+					</li>
 					<li className="navbar__item" onClick={() => navigate("/posts/")}>
 						JOBS
 					</li>
