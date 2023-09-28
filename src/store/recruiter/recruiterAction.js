@@ -27,7 +27,6 @@ export const loginRecruiter = createAsyncThunk(
 );
 
 export const getOneRecruiter = createAsyncThunk(
-
     'recruiter/getOneRecruiter',
     async () => {
         const config = getAuthConfig();

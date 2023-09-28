@@ -51,8 +51,6 @@ your Dreams</p>
                 </div>
                 <div className={style.jobDreams_block_2_list}>
 
-                    
-
                     <div className={style.jobDreams_block_2_list_main}>
                         <img className={style.jobDreams_block_2_list_main_img} src={ slack } alt="slack" />
                     </div>
